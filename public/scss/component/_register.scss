@@ -1,0 +1,30 @@
+.registerSz{
+   height: 48px ;
+}
+.textRed{
+    color: red;
+}
+.registerBtn{
+    width: 48%;
+    height: 48px;
+    line-height: 33px;
+}
+@media (max-width: 767.98px) {
+    .registerSz{
+        width: 100%;
+    }
+}
+
+//for registerDone page
+.registerDone {
+    width: 500px;
+    height: 300px;
+}
+.registerDoneBtn{
+    width: 60%;
+    height: 40px;
+}
+.registerDoneIcon {
+    font-size: 100px !important;
+    color: green;
+}

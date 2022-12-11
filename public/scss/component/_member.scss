@@ -1,0 +1,43 @@
+.member-text1 {
+    width: 22%;
+}
+
+.member-title {
+    line-height: 48px;
+}
+
+.member-h2 {
+    font-size: 32px;
+}
+
+.member-btn {
+    width: 50%;
+}
+.memberImg{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
+@media (max-width: 767.98px) {
+    .member-h2 {
+        font-size: 24px;
+    }
+
+    .member-text1 {
+        width: 30%;
+    }
+
+    .member-title {
+        line-height: 36px;
+    }
+
+    .member-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .member-text1 {
+        width: 20%;
+    }
+}

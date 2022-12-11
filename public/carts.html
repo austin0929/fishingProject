@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+    <link rel="stylesheet" href="scss/all.css">
+</head>
+
+<body>
+    <div class="container-fluid px-0 positionRel">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg py-2 px-1  px-lg-7 mb-md-9 mb-6 navList">
+        </nav>
+        <!-- navbarEnd -->
+
+
+        <!-- carts -->
+        <!-- <section>
+            <div class="px-lg-8">
+                <ul class="row px-0 justify-content-center mb-md-8 mb-5">
+                    <li class="col-xl-6 col-lg-10">
+                        <div class="pe-4 pe-xl-0">
+                            <ul class="progress2">
+                                <li class="done">確認訂單</li>
+                                <li class="">訂購資訊</li>
+                                <li class="">付款資訊</li>
+                                <li class="">完成</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="row px-xl-0 pe-2 ps-2 justify-content-center">
+                    <li class="col-xl-8 col-lg-12">
+                            <div class="d-flex pt-1 bg-fourth ps-2">
+                                <h3 class="h6 cartProduct">商品</h3>
+                                <h3 class="h6 cartPrice">單價</h3>
+                                <h3 class="h6 cartNum">數量</h3>
+                                <h3 class="h6 cartTotal">合計</h3>
+                                <h3 class="h6 cartDelete">刪除</h3>
+                            </div>
+                    </li>
+                        <ul class="cartsList px-0 row justify-content-center">
+                            <li class="d-flex p-2 border align-items-center mb-2">
+                                <div class="cartProduct d-flex align-items-center flex-wrap">
+                                <img width="100px" class="me-3"
+                                    src="https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/11/olympic_corto_prototye_2023_0.png?w=1280&ssl=1"
+                                    alt="">
+                                <h3 class="h6">月下美人</h3>
+                                </div>
+                                <h3 class="h6 cartPrice">NT$1800</h3>
+                                <div class="cartNum">
+                                    <a href="#">
+                                        <i class="fa-solid fa-minus fa-xl text-black"></i>
+                                    </a>
+                                    <span class="d-inline-block mx-1">1</span>
+                                    <a href="#">
+                                        <i class="fa-sharp fa-solid fa-plus fa-xl text-black"></i>
+                                    </a>
+                                </div>
+                                <h3 class="h6 cartTotal">NT$1800</h3>
+                                <a href="#" class="cartDeleteIcon"><i class="fa-solid fa-trash-can cartDelete text-center ms-3 text-third"></i></a>
+                            </li>
+                        </ul>
+                        <div class="d-flex justify-content-end mb-4">
+                                <h4 class="h6 me-5">總金額</h4>
+                                <span class="h6">NT$1,800</span>
+                        </div>     
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-success me-3 text-light">繼續購物</a>
+                            <a href="#" class="btn btn-success text-light">送出訂單</a>
+                        </div>                
+                    </li>              -->
+        <section>
+            <div class="px-lg-8">
+                <ul class="row px-0 justify-content-center mb-md-8 mb-5">
+                    <li class="col-xl-6 col-lg-10">
+                        <div class="pe-4 pe-xl-0">
+                            <ul class="progress2">
+                                <li class="done">確認訂單</li>
+                                <li class="">訂購資訊</li>
+                                <li class="">付款資訊</li>
+                                <li class="">完成</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="d-flex justify-content-center align-items-center ms-xl-9 ms-0">
+                    <table class="cartTable">
+                        <thead>
+                            <tr>
+                                <th width="36%">品項</th>
+                                <th width="15%">單價</th>
+                                <th width="17%">數量</th>
+                                <th width="15%">金額</th>
+                                <th width="17%">刪除</th>
+                            </tr>
+                        </thead>
+                        <tbody class="cartList">
+                            <!-- <tr>
+                                <td>
+                                    <div class="cartProduct d-flex align-items-center flex-wrap w-100">
+                                            <img width="130px" class="me-lg-3 mt-4 mt-md-0"
+                                                src="https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/11/olympic_corto_prototye_2023_0.png?w=1280&ssl=1"
+                                                alt="">
+                                    <p class="pt-lg-2">月下美人</p>
+                                    </div>
+                                </td>
+                                <td>NT$12,000</td>
+                                <td>
+                                    <div class="cartNum d-flex">
+                                        <a href="#">
+                                            <i class="fa-solid fa-minus fa-xl text-black"></i>
+                                        </a>
+                                        <span class="d-inline-block mx-1">1</span>
+                                        <a href="#">
+                                            <i class="fa-sharp fa-solid fa-plus fa-xl text-black"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>NT$12,000</td>
+                                <td class="deleteCartItemBtn">
+                                    <a href="#" class="cartDeleteIcon ">
+                                    <i class="fa-solid fa-trash-can cartDelete text-center ms-3 text-third pe-2"></i>
+                                    </a>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>
+                                    <a href="#" class="deleteAllCartBtn">刪除所有品項</a>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <p class="pt-2">總金額</p>
+                                </td>
+                                <td class="totalPrice">計算中</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- </ul>
+                <div class="d-flex justify-content-end mb-4">
+                    <h4 class="h6 me-5">總金額</h4>
+                    <span class="h6">NT$1,800</span>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <a href="#" class="btn btn-success me-3 text-light">繼續購物</a>
+                    <a href="#" class="btn btn-success text-light">送出訂單</a>
+                </div>
+            </div>
+        </section>   -->
+        <!-- cartsEnd -->
+
+        <!-- footer -->
+        <section>
+            <div class="footer py-md-8 py-5 px-md-7 px-2">
+                <ul class="d-flex justify-content-md-between flex-wrap px-0">
+                    <li>
+                        <div class="d-flex   flex-column ">
+                            <img src="img/SHARK.svg" width="220px" alt="" class="mb-2">
+                            <img src="img/Line 2 (Stroke).svg" width="220px" alt="" class="mb-2">
+                            <img src="img/路亞釣魚平台.svg" alt="" width="220px" class="mb-5">
+                            <p class="h6 d-none d-md-block mb-5">
+                                SHARK 路亞釣魚平台，是台灣第一個整合所有釣魚資訊的網路平<br>台
+                                ，除了販售相關釣魚產品外，亦可與釣友一起分享釣魚心得
+                                ，更<br>可以搜尋地點、觀看風浪、潮汐及天氣圖表等詳細的專業資訊。
+                            </p>
+                            <p class="h6 mb-6 d-block d-md-none">
+                                SHARK 路亞釣魚平台，是台灣第一個整合所有釣魚資訊的網路平台
+                                ，除了販售相關釣魚產品外，亦可與釣友一起分享釣魚心得
+                                ，更可以搜尋地點、觀看風浪、潮汐及天氣圖表等詳細的專業資訊。
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h2 class="h3 fw-bold mb-md-5 mb-4">聯絡我們</h2>
+                            <ul class="d-flex flex-md-row px-0 flex-column  ">
+                                <li class="me-5 mb-2">
+                                    <h3 class="h6 fw-bold  mb-1">地址</h3>
+                                    <p class="h6 text-secondary">新北市新莊區</p>
+                                </li>
+                                <li class="me-5 mb-2">
+                                    <h3 class="h6 fw-bold  mb-1">電話</h3>
+                                    <p class="h6 text-secondary">0954166177</p>
+                                </li>
+                                <li>
+                                    <h3 class="h6 fw-bold  mb-1">電子信箱</h3>
+                                    <p class="h6 text-secondary">1234567@gmail.com</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <span class="d-block mt-4 mt-md-0 text-center text-secondary h6">©2022 SHARK CO. ALL RIGHTS
+                    RESERVED</span>
+            </div>
+        </section>
+        <!-- footerEnd -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="scss/navbar.js"></script>
+    <script src="scss/footer.js"></script>
+    <script src="scss/cart.js"></script>
+</body>
+
+</html>

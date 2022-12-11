@@ -1,0 +1,44 @@
+.subscriptionSearchItem {
+    position: relative;
+}
+
+.subscriptionSearchBtn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 92px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.subscriptionTxt {
+    font-size: 40px;
+}
+
+.subscriptionSearch {
+    position: absolute;
+    top: 36%;
+    bottom: 36%;
+    left: 12px;
+    right: 99%;
+}
+
+.subscriptionInp {
+    width: 45%;
+}
+.subscriptionBg {
+    background: linear-gradient(0deg, rgba(8, 123, 230, 0.8), rgba(8, 123, 230, 0.8)), url("https://images.unsplash.com/photo-1505118380757-91f5f5632de0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=626&q=80");
+    background-size: cover;
+    background-position: center center;
+    height: 314px;
+}
+@media (max-width: 767.98px) {
+    .subscriptionTxt {
+            font-size: 39px !important
+        }
+    
+        .subscriptionInp {
+            width: 100%;
+        }
+}
