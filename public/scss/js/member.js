@@ -27,7 +27,7 @@ console.log(file);
         const data = {
             userImg: reader.result
         }
-        axios.patch(`http://localhost:3000/users/${getLocaluserId}`, data)
+        axios.patch(`${baseUrl}/users/${getLocaluserId}`, data)
             .then((res => {
                 console.log(res);
                 userImgList = res.data
