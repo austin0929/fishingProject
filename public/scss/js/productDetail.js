@@ -64,7 +64,7 @@ const getProductDetailData = () => {
 
 //取使用者評論 //判斷星星後組user字串
 const getUserComment = () => {
-    axios.get(`${baseUrl}/600/comments/${getLocalUserId()}`)
+    axios.get(`${baseUrl}/600/comments`)
         .then((res => {
             let productId = localStorage.getItem('productId');
             let str = ''
