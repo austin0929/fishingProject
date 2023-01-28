@@ -4,6 +4,10 @@ let productTagRod = document.querySelector(".productTagRod")
 let productTagReel = document.querySelector(".productTagReel")
 let productTagLure = document.querySelector(".productTagLure")
 let productTitle = document.querySelector(".productTitle")
+
+//購物車超過第二筆中斷
+let addCartBreak = []
+
 let baseUrl = "http://localhost:3000";
 let productUrl = baseUrl + "/products"
 
@@ -73,7 +77,7 @@ let renderProductHTML = (item) => {
                          </div>
                          <div class="ms-auto pe-lg-3 pe-2 pb-1 cartIcon d-flex  align-items-end h-100">
                             <a href="#" data-productId="${item.id}">
-                                <i class="fa-sharp fa-solid fa-cart-shopping text-third js-addCartBtn" data-productId="${item.id}"></i>
+                                <i class="fa-sharp fa-solid fa-cart-shopping text-third js-addCartBtn" data-productId="${item.id}" data-addCartID="${item.id}"></i>
                             </a>
                          </div>
                            </div>
@@ -98,6 +102,8 @@ categoryBtn.addEventListener("click", e => {
     }))
 })
 
+
+
 //監聽產品事件
 productListDom.addEventListener("click", e => {
     e.preventDefault()
@@ -121,22 +127,38 @@ productListDom.addEventListener("click", e => {
 
         getCartList.forEach((item=>{
             if (item.productId === productId) {
-                productNum = item.qty+=1
+                productNum = item.qty++
             }
         }))
 
+        //判斷是否超過兩筆
+        getCartList.filter(function (value) {
+            if (value.productId == e.target.getAttribute("data-productId")) {
+                addCartBreak.push(value.productId)
+            }
+        })
+        if (addCartBreak.length > 0) {
+            addCartBreak.splice(0, 50)
+            Swal.fire('重複加入', '請去購物車操作', 'error')
+             cartDelay()
+            return
+        }
+        console.log(addCartBreak);
+           
         const data = {
-            productId: productId ,
+            productId: productId,
             qty: productNum
     }
+
         console.log(productNum, productId);
         axios.post(addCartUrl,data)
             .then((res => {
                 console.log(res);
+                Swal.fire('加入購物車', '你已成功加入購物車', 'success')
+                init()
             }))
     }
 })
-
 
 //get購物車api
 const cartList =()=>{
@@ -144,10 +166,18 @@ const cartList =()=>{
     .then((res=>{
         getCartList = res.data
         getCartList.forEach((item=>{
-            localCartId(item.id)
+            localCartId(item.id)    
         }))
     }))
 }
+
+const cartDelay = ()=>{
+    setTimeout(() => {
+        window.location.replace('carts.html');
+    }, 2000);
+}
+
+//http://localhost:3000/carts/1?_expand=user
 
 
 init()
