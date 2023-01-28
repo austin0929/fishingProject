@@ -72,7 +72,7 @@ bookmarkListDom.addEventListener("click",e=>{
                         Swal.fire('登入逾時', '時間到！請登出後重新登入！', 'error')
                     }
                     if (error.response.data === "jwt malformed") {
-                        Swal.fire('請登入後操作！')
+                        Swal.fire('請登入後操作')
                     }
                 }))
             }
