@@ -71,67 +71,29 @@
         </nav>
         <!-- navbarEnd -->
 
-        <!-- member -->
+
+        <!-- bookmark -->
         <section>
-            <div class="row justify-content-center px-0">
-                <div class="col-xl-6 col-lg-8">
-                    <div class="row justify-content-center">
-                        <div class="col-md-12">
-                            <div class="row align-items-center px-2">
-                                <div class="col-12 col-md-6 mb-4 mb-md-0">
-                                    <ul class="px-0">
-                                        <li class="d-flex align-items-center mb-md-6 mb-4">
-                                            <h2 class="fw-bold me-2">會員資料</h2>
-                                            <a href="editMember.html" class="text-success pb-1"><i
-                                                    class="fas fa-pen fa-lg"></i></a>
-                                        </li>
-                                        <li class="d-flex align-items-center mb-mb-6 mb-4 memberUserData">
-                                            <!-- <img class="me-3 memberImg"
-                                    src="https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                                    alt=""> -->
-                                            <!-- <input type="file" id="file-uploader" accept="image/png" multiple="multiple" />
-                                    <img id='preview' class="me-3 memberImg">
-                                <h3 class="h4  fw-bold">John lee</h3>
-                                <a href="#"><i class="fa-sharp fa-solid fa-camera text-light memberCameraIcon"></i></a> -->
-
-
-                                            <img id='preview' class="me-3" height="180" width="180"
-                                                style="border-radius: 50%;">
-                                            <a href="#" class="fa-sharp fa-solid fa-camera text-light ">
-                                            </a>
-                                            <input id="file" accept="image/png" multiple="multiple" style="opacity:0"
-                                                type="file" class="memberCameraIcon">
-                                        </li>
-                                        <li class="d-flex mb-4">
-                                            <p class="h6 member-text1 text-left">電子信箱</p>
-                                            <p class="h6 text-third member-text-2 memberMail">aass@gmail.com</p>
-                                        </li>
-                                        <li class="d-flex mb-4">
-                                            <p class="h6 member-text1 text-left">聯絡電話</p>
-                                            <p class="h6 text-third member-text-2 memberPhone">098874123</p>
-                                        </li>
-
-                                        <li class="d-flex">
-                                            <p class="h6 member-text1 text-left">聯絡地址</p>
-                                            <p class="h6 text-third member-text-2 memberAddress">新北市高雄區 </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <div>
-                                        <p class="member-h2 member-title fw-bold mb-3 text-left memberName">
-                                            HI,john<br>喜歡我們的產品嗎? <br>
-                                            現在你也可以成為路亞高手囉!
-                                        </p>
-                                        <a href="products.html"
-                                            class="btn-success btn btn-lg member-btn text-light">看更多產品!</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <ul class="row justify-content-center mx-0 px-0 mb-5">
+                <li class="col-md-10">
+                    <h2 class="fw-bold h1 mb-3">我的收藏</h2>
+                    <div class="categoryBtn">
+                        <button class="btn btn-third btn-sm text-light me-1 productTagRod" value="路亞竿"
+                            type="button">路亞竿</button>
+                        <button href="#" class="btn btn-third btn-sm text-light me-1 productTagReel" value="捲線器"
+                            type="button">捲線器</button>
+                        <button href="#" class="btn btn-third btn-sm text-light productTagLure" value="路亞餌"
+                            type="button">路亞餌</button>
                     </div>
+                    <hr>
+                    <ul class="row px-0 bookmarkList ">
+
+                    </ul>
+                </li>
+
+            </ul>
         </section>
-        <!-- memberEnd -->
+        <!-- bookmarkEnd -->
 
         <!-- footer -->
         <section>
@@ -155,10 +117,9 @@
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <!-- myJS -->
     <script src="scss/config.js"></script>
-    <script src="scss/layoutJs/navbar.js"></script>
     <script src="scss/layoutJs/footer.js"></script>
-    <script src="scss/js/member.js"></script>
-
+    <script src="scss/layoutJs/navbar.js"></script>
+    <script src="scss/js/bookmars.js"></script>
 </body>
 
 </html>

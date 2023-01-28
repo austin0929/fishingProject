@@ -3,30 +3,37 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>路亞鯊魚</title>
+  <link rel="shortcut icon" href="./img/Fish_icon.svg" type="image/x-icon">
+
+  <!-- fontawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <!-- googleFont -->
   <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+  <!-- aos animate CSS-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- myCSS -->
   <link rel="stylesheet" href="scss/all.css">
 </head>
 
 <body>
   <div class="container-fluid px-0 positionRel">
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg py-2 px-1  px-lg-7 navList">
-      <!-- <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+    <nav class="navbar navbar-expand-lg py-2 px-1  px-lg-7 ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
           <div class="d-flex  flex-column ">
-            <img src="img/SHARK.svg" width="88" alt="" class="mb-1">
-            <img src="img/Line 2 (Stroke).svg" alt="" class="mb-1">
-            <img src="img/路亞釣魚平台.svg" alt="">
+            <img src="https://i.imgur.com/m4DS6F1.jpg" width="88" alt="" class="mb-1">
+            <img src="https://i.imgur.com/0fuaLdA.jpg" alt="" class="mb-1">
+            <img src="https://i.imgur.com/UjvXAdI.jpg" alt="">
           </div>
         </a>
-
-        <button class="hanburgerBtm d-lg-none d-block" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="hanburgerBtm d-lg-none d-block" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-sharp fa-solid fa-bars fa-lg"></i>
         </button>
         <div class="collapse navbar-collapse navbar-Custom" id="navbarText">
@@ -35,35 +42,33 @@
             </a>
           </ul>
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <div class="dropdown nav-link">
-                <button class="btn pt-0 px-0 mt-4 mt-lg-0 text-secondary navbarBtn h6  mb-4 mb-lg-0 dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  產品介紹
-                </button>
-                <ul class="dropdown-menu dropdown-menu dropdownBtn py-2" aria-labelledby="dropdownMenuButton2">
-                  <li><a class="dropdown-item mb-lg-2 mb-4" href="#">釣竿</a></li>
-                  <li><a class="dropdown-item mb-lg-2 mb-4" href="#">捲線器</a></li>
-                  <li><a class="dropdown-item" href="#">路亞餌</a></li>
-                  </ul>
-              </div>
+            <li class="nav-item d-none d-lg-block">
+              <p class="nav-link active text-secondary me-lg-3 h6 mb mb-lg-0 loginBtn loginUser"></p>
             </li>
             <li class="nav-item">
-              <a class="nav-link active text-secondary ms-lg-2 h6 mb-4 mb-lg-0" aria-current="page" href="#">會員專區</a>
-            </li>
-              <li class="nav-item">
-                <a class="nav-link active text-secondary ms-lg-2 h6 mb-4 mb-lg-0" aria-current="page" href="#">購物車</a>
-              </li>
-            <li class="nav-item">
-              <p class="nav-link active text-secondary ms-lg-2 h6 mb-4 mb-lg-0">hi David</p>
+              <a class="nav-link active text-secondary ms-lg-0 me-2 h6 mb-4 mb-lg-0" aria-current="page"
+                href="products.html">商品專區</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active text-light py-1 px-1 btn btn-success ms-lg-2 px-3 py-1 h6 mb-4 mb-lg-0 loginBtn" aria-current="page"
-                href="#">登入</a>
+              <a class="nav-link active text-secondary me-lg-2 h6 mb-4 mb-lg-0 navbarMemberBtn" aria-current="page"
+                href="member.html">會員專區</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-secondary ms-lg-0 me-2 h6 mb-4 mb-lg-0" aria-current="page"
+                href="bookmarks.html">我的收藏</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-secondary ms-lg-2 h6 mb-4 mb-lg-0" aria-current="page"
+                href="carts.html">購物車</a>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link active text-light py-1 px-1 btn btn-success  ms-lg-4 px-3 py-1 h6 mb-4 mb-lg-0 loginBtn js-loginBtn"
+                aria-current="page" value="登入">登入</button>
             </li>
           </ul>
         </div>
-      </div> -->
+      </div>
     </nav>
     <!-- navbarEnd -->
 
@@ -77,7 +82,7 @@
           <h1 class="text-light display-3  banner-title h1 fw-bold d-block d-md-none">享受垂釣樂趣，<br>體驗無限創新<br>
             感受美好瞬間。<span class="d-block text-fourth h3 fw-normal mt-2 mb-4">Enjoy Your Fishing Life</span></h1>
           <div class="d-flex searchItem js-searchItem">
-            <input class="form-control rounded banner-inp  ps-4 searchInp" type="search" placeholder="探索釣魚相關產品"
+            <input class="form-control rounded banner-inp  ps-4 searchInp" type="search" placeholder="請輸入釣具類別"
               aria-label="Search">
             <i class="fa-solid fa-magnifying-glass search"></i>
             <a href="./products.html" class="btn btn-success text-light  searchBtn">
@@ -95,7 +100,7 @@
         <ul class="row mx-0 px-0 g-2">
           <li class="col-xl-3 ">
             <div class="d-flex ">
-              <img src="img/Deco1.png" class=" outSideLine py-1 me-2" alt="">
+              <img src="https://i.imgur.com/kRa92N2.png" class="outSideLine py-1 me-2" alt="">
               <h3 class="text-center fw-bold h2 mb-3">路亞優勢</h3>
             </div>
             <p class="h6 mb-4 AdvantageZone">
@@ -104,18 +109,21 @@
               時間適用範圍更廣，沒有白天晚上的局限性，
               只要水域條件合適，全天任何時段都可以自由垂釣。
             </p>
-            <a href="#" class="fw-normal btn-success btn py-1 px-3 text-light AdvantageZone">立即登入交流!</a>
+            <a href="login.html" class="fw-normal btn-success btn py-1 px-3 text-light AdvantageZone">立即登入交流!</a>
           </li>
           <li class="col-xl-3 mb-1">
-            <div class="AdvantageImg mb-md-1 mb-2 rounded"></div>
+            <div class="AdvantageImg mb-md-1 mb-2 rounded " data-aos="zoom-in" data-aos-delay="100"
+              data-aos-duration="300"></div>
             <h3 class="h3 fw-bold">靈活度高</h3>
           </li>
           <li class="col-xl-3 mb-1">
-            <div class="AdvantageImg2 mb-md-1 mb-2 rounded"></div>
+            <div class="AdvantageImg2 mb-md-1 mb-2 rounded" data-aos="zoom-in" data-aos-delay="300"
+              data-aos-duration="500"></div>
             <h3 class="h3 fw-bold ">更加環保</h3>
           </li>
           <li class="col-xl-3 mb-1">
-            <div class="AdvantageImg3 mb-md-1 mb-2 rounded"></div>
+            <div class="AdvantageImg3 mb-md-1 mb-2 rounded" data-aos="zoom-in" data-aos-delay="500"
+              data-aos-duration="700"></div>
             <h3 class="h3 fw-bold ">操控樂趣</h3>
           </li>
         </ul>
@@ -136,29 +144,26 @@
         <div class="swiper  ">
 
           <div class="d-flex">
-            <img src="img/Deco1.png" class=" outSideLine py-1 me-2" alt="">
+            <img src="https://i.imgur.com/kRa92N2.png" class=" outSideLine py-1 me-2" alt="">
             <h3 class=" fw-bold h2 mb-3">熱門產品</h3>
           </div>
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide rounded ">
               <div class="card">
-                <div class="cardImg mb-3 rounded-top"></div>
+                <div class="cardImg2 mb-3 rounded-top"></div>
                 <div class="px-3 pb-3">
-                  <h2 class="fw-bold mb-2 h3">超平民泛用系列 Abu
-                    Garcia SALTY FIELD 海水路亞竿</h2>
+                  <h2 class="fw-bold mb-2 h3">顫動吧！issei SPEED SARDINE Urume Vibe</h2>
                   <div class="h6 mb-2">
-                    <a href="#" class="bg-danger p-1 rounded">期間限定</a>
-                    <a href="#" class="bg-danger p-1 rounded">新手入門</a>
-                    <a href="#" class="bg-danger p-1 rounded">釣竿</a>
+                    <a href="#" class="bg-danger p-1 rounded">捲線器</a>
+                    <a href="#" class="bg-danger p-1 rounded">路亞餌</a>
+                    <a href="#" class="bg-danger p-1 rounded">路亞竿</a>
                   </div>
                   <p class="h6 mb-3">
-                    Abu Garcia推出海水路亞竿系列
-                    「SALTY FIELD」，各款型號用途廣泛
-                    ，平民價位更是吸引小資釣友。
+                    「SPEED SARDINE Urume Vibe」長度90mm重量30g，本體背部提供3處Line eye讓釣手可以視自身需求做調整
                   </p>
                   <div class="d-flex justify-content-end">
-                    <a href="#" class="text-black ">立即購買
+                    <a href="login.html" class="text-black ">立即購買
                       <i class="fa-sharp fa-solid fa-arrow-right text-right"></i>
                     </a>
                   </div>
@@ -166,39 +171,36 @@
               </div>
             </div>
             <div class="swiper-slide rounded">
-              <div class="card">
-                <div class="cardImg mb-3 rounded-top"></div>
+              <div class="card h-100">
+                <div class="cardImg3 mb-3 rounded-top "></div>
                 <div class="px-3 pb-3">
-                  <h2 class="fw-bold mb-2 h3">超平民泛用系列 Abu
-                    Garcia SALTY FIELD 海水路亞竿</h2>
+                  <h2 class="fw-bold mb-2 h3">大幅變革！DAIWA Morethan PE TW雙軸梭式捲線器</h2>
                   <div class="h6 mb-2">
-                    <a href="#" class="bg-danger p-1 rounded">期間限定</a>
-                    <a href="#" class="bg-danger p-1 rounded">新手入門</a>
-                    <a href="#" class="bg-danger p-1 rounded">釣竿</a>
+                    <a href="#" class="bg-danger p-1 rounded">捲線器</a>
+                    <a href="#" class="bg-danger p-1 rounded">路亞餌</a>
+                    <a href="#" class="bg-danger p-1 rounded">路亞竿</a>
                   </div>
                   <p class="h6 mb-3">
-                    Abu Garcia推出海水路亞竿系列
-                    「SALTY FIELD」，各款型號用途廣泛
-                    ，平民價位更是吸引小資釣友。
+                    「Morethan PE TW」 有別於SV版僅有單一捲比，這次可是提供7.1:1以及8.6:1兩種捲比讓釣手選購
                   </p>
                   <div class="d-flex justify-content-end">
-                    <a href="#" class="text-black ">立即購買
+                    <a href="login.html" class="text-black ">立即購買
                       <i class="fa-sharp fa-solid fa-arrow-right text-right"></i>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide rounded ">
-              <div class="card">
-                <div class="cardImg mb-3 rounded-top"></div>
+            <div class="swiper-slide rounded">
+              <div class="card h-100">
+                <div class="cardImg mb-3 rounded-top "></div>
                 <div class="px-3 pb-3">
                   <h2 class="fw-bold mb-2 h3">超平民泛用系列 Abu
                     Garcia SALTY FIELD 海水路亞竿</h2>
                   <div class="h6 mb-2">
-                    <a href="#" class="bg-danger p-1 rounded">期間限定</a>
-                    <a href="#" class="bg-danger p-1 rounded">新手入門</a>
-                    <a href="#" class="bg-danger p-1 rounded">釣竿</a>
+                    <a href="#" class="bg-danger p-1 rounded">捲線器</a>
+                    <a href="#" class="bg-danger p-1 rounded">路亞餌</a>
+                    <a href="#" class="bg-danger p-1 rounded">路亞竿</a>
                   </div>
                   <p class="h6 mb-3">
                     Abu Garcia推出海水路亞竿系列
@@ -206,7 +208,7 @@
                     ，平民價位更是吸引小資釣友。
                   </p>
                   <div class="d-flex justify-content-end">
-                    <a href="#" class="text-black ">立即購買
+                    <a href="login.html" class="text-black ">立即購買
                       <i class="fa-sharp fa-solid fa-arrow-right text-right"></i>
                     </a>
                   </div>
@@ -217,10 +219,10 @@
         </div>
         <div class="swiper-btn">
           <div class="swiper-button-prev rounded-circle  ">
-            <img src="img/Property 1=arrow-left.jpg" alt="">
+            <img src="https://i.imgur.com/afdh3hP.jpg" alt="">
           </div>
           <div class="swiper-button-next rounded-circle  ">
-            <img src="img/Property 1=arrow-right.jpg " alt="">
+            <img src="https://i.imgur.com/dir26Mm.jpg" alt="">
           </div>
         </div>
 
@@ -236,16 +238,18 @@
           <h2 class=" fw-bold  h1 mb-md-8 mb-5">如何挑選你的<br>
             路亞竿及捲線器?</h2>
           <div class="d-flex mb-4">
-            <img src="img/Deco1.png" class=" outSideLine py-1 me-2" alt="">
+            <img src="https://i.imgur.com/kRa92N2.png" class=" outSideLine py-1 me-2" alt="">
             <h3 class=" fw-bold h2">路亞竿</h3>
           </div>
           <ul class="row px-0  mb-5 g-md-1">
             <li class="col-lg-5">
-              <div class="choosingImg d-none d-lg-block "></div>
-              <div class="choosingSmImg d-lg-none d-block "></div>
+              <div class="choosingImg d-none d-lg-block" data-aos="fade-down" data-aos-delay="200"
+                data-aos-duration="200"></div>
+              <div class="choosingSmImg d-lg-none d-block " data-aos="fade-down" data-aos-delay="200"
+                data-aos-duration="200"></div>
             </li>
             <li class="col-lg-7 mb-0">
-              <ul class="pt-2 px-0">
+              <ul class="pt-2 px-0" data-aos="flip-left" data-aos-delay="300" data-aos-duration="300">
                 <li class="mb-4">
                   <h3 class="h5 fw-bold">
                     釣竿長度 :
@@ -282,16 +286,18 @@
             </li>
           </ul>
           <div class="d-flex mb-4">
-            <img src="img/Deco1.png" class=" outSideLine py-1 me-2" alt="">
+            <img src="https://i.imgur.com/kRa92N2.png" class=" outSideLine py-1 me-2" alt="">
             <h3 class=" fw-bold h2">捲線器</h3>
           </div>
           <ul class="row px-0  mb-5 g-md-1">
             <li class="col-lg-5">
-              <div class="choosingImg2 d-none d-lg-block "></div>
-              <div class="choosingSmImg2 d-lg-none d-block"></div>
+              <div class="choosingImg2 d-none d-lg-block" data-aos="fade-down" data-aos-delay="300"
+                data-aos-duration="300"></div>
+              <div class="choosingSmImg2 d-lg-none d-block" data-aos="fade-down" data-aos-delay="300"
+                data-aos-duration="300"></div>
             </li>
             <li class="col-lg-7 mb-0">
-              <ul class="pt-2 px-0">
+              <ul class="pt-2 px-0" data-aos="flip-left" data-aos-delay="400" data-aos-duration="400">
                 <li class="mb-4">
                   <h3 class="h5 fw-bold">
                     培林
@@ -339,11 +345,12 @@
       <div class="px-2 subscriptionInp">
         <h2 class=" fw-bold text-light mb-md-5 mb-4 subscriptionTxt">記得訂閱以獲得更多資訊!</h2>
         <div class="d-flex subscriptionSearchItem">
-          <input class="form-control  rounded banner-inp  ps-4 " type="search" placeholder="fishing@example.com"
-            aria-label="Search">
+          <input class="form-control  rounded banner-inp  ps-4 subscribesBtnInp" type="search"
+            placeholder="fishing@example.com" aria-label="Search">
           <i class="fa-sharp fa-solid fa-envelope subscriptionSearch "></i>
-          
-          <button class="btn btn-success text-light p-1 subscriptionSearchBtn" type="submit">
+
+          <button class="btn btn-success text-light p-1 subscriptionSearchBtn subscribesBtn" value="subscribesBtn"
+            type="submit">
             訂閱
           </button>
         </div>
@@ -355,60 +362,36 @@
   <!-- footer -->
   <section>
     <div class="footer py-md-8 py-5 px-md-7 px-2">
-      <!-- <ul class="d-flex justify-content-md-between flex-wrap px-0">
-        <li >
-          <div class="d-flex   flex-column ">
-            <img src="img/SHARK.svg" width="220px" alt="" class="mb-2">
-            <img src="img/Line 2 (Stroke).svg" width="220px" alt="" class="mb-2">
-            <img src="img/路亞釣魚平台.svg" alt="" width="220px" class="mb-5">
-            <p class="h6 d-none d-md-block mb-5">
-              SHARK 路亞釣魚平台，是台灣第一個整合所有釣魚資訊的網路平<br>台
-              ，除了販售相關釣魚產品外，亦可與釣友一起分享釣魚心得
-              ，更<br>可以搜尋地點、觀看風浪、潮汐及天氣圖表等詳細的專業資訊。
-            </p>
-            <p class="h6 mb-6 d-block d-md-none">
-              SHARK 路亞釣魚平台，是台灣第一個整合所有釣魚資訊的網路平台
-              ，除了販售相關釣魚產品外，亦可與釣友一起分享釣魚心得
-              ，更可以搜尋地點、觀看風浪、潮汐及天氣圖表等詳細的專業資訊。
-            </p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <h2 class="h3 fw-bold mb-md-5 mb-4">聯絡我們</h2>
-            <ul class="d-flex flex-md-row px-0 flex-column  ">
-              <li class="me-5 mb-2">
-                <h3 class="h6 fw-bold  mb-1">地址</h3>
-                <p class="h6 text-secondary">新北市新莊區</p>
-              </li>
-              <li class="me-5 mb-2">
-                <h3 class="h6 fw-bold  mb-1">電話</h3>
-                <p class="h6 text-secondary">0954166177</p>
-              </li>
-              <li>
-                <h3 class="h6 fw-bold  mb-1">電子信箱</h3>
-                <p class="h6 text-secondary">1234567@gmail.com</p>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-      <span class="d-block mt-4 mt-md-0 text-center text-secondary h6">©2022 SHARK CO. ALL RIGHTS RESERVED</span> -->
     </div>
   </section>
   <!-- footerEnd -->
   </div>
+
+  <!-- bootstrap popperjs -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <!-- bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <!-- swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-  <script src="scss/navbar.js"></script>
-  <script src="scss/footer.js"></script>
+  <!-- sweetalert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- axios -->
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <!-- aos animate JS-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- myJS -->
+    <script src="scss/config.js"></script>
+  <script src="scss/layoutJs/navbar.js"></script>
+  <script src="scss/layoutJs/footer.js"></script>
   <script src="scss/swiper.js"></script>
-  <script src="scss/index.js"></script>
+  <script src="scss/js/index.js"></script>
 </body>
 
 </html>

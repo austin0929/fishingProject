@@ -1,293 +1,36 @@
 {
   "users": [
     {
-      "id": "1",
-      "email": "austin@gmail.com",
-      "password": "abc123",
-      "ConfirmPassword": "abc123",
+      "email": "david0929@gmail.com",
+      "password": "$2a$10$zFgDRAhkf1/rlKn4n3WZQuF.fkE7Gt6mpEpqjIbg6pUl9LV12FPt2",
+      "makeSurePassword": "1q2w3e",
       "name": "david",
-      "phone": "0957446133",
-      "address": "new taipei",
-      "sex": "man",
       "role": "admin",
-      "userId": "1",
-      "productId": "2",
-      "qty": 50,
-      "totalPrice": 3060
-    },
-    {
-      "id": "2",
-      "email": "abc123@gmail.com",
-      "password": "abc123",
-      "ConfirmPassword": "abc123",
-      "name": "david",
-      "phone": "0957846133",
-      "address": "new taipei",
-      "sex": "woman",
-      "role": "user"
-    },
-    {
-      "email": "david@gmail.com",
-      "password": "$2a$10$hu479Dp/8TkxUME02a9WNeXznfMQ87RBOhemoEZz1X43.Ayd5ZCIq",
-      "id": "3IPEtGR"
-    },
-    {
-      "email": "did@gmail.com",
-      "password": "$2a$10$8UwD9z8aC3vTTljVc8AF2O3dbsTxGMlZ7/kHW29Tjxb/plhUpBYLa",
-      "id": "QUrlen2"
-    },
-    {
-      "email": "ewwq@yahoo.com",
-      "password": "$2a$10$mWvE9ziJGF4A1IOnm2IJXe31vYq5PIiQ7CUh8v3MC//RhkLON0jxG",
-      "makeSurePassword": "eqweqw",
-      "name": "ewqe",
-      "phone": "qweqw",
-      "address": "eqw",
-      "id": "9pMxQYW"
-    },
-    {
-      "email": "john@gmail.com",
-      "password": "$2a$10$VZHcgzK48M4BXmfAbH6cCez1dXW6qGYdH1UlIlb48bttVZ8SO.qeW",
-      "makeSurePassword": "1q2w3e4r5t",
-      "name": "john",
-      "phone": "0975555111",
-      "address": "新北市三重",
-      "id": "v6h_x6O"
-    },
-    {
-      "email": "ewqeqw@gmail.com",
-      "password": "$2a$10$WqV2V9rSjv/undgzC1O/j.9XVjKo3/YKR5/DYk3MrRtb.wEhjQgMS",
-      "makeSurePassword": "ewqeqw",
-      "name": "dsa",
-      "phone": "547",
-      "address": "dsa",
-      "id": "G0MPyQn"
-    },
-    {
-      "email": "ewqeqsaw@gmail.com",
-      "password": "$2a$10$Lbp6wtz5ywJ7zCg7YGV9hOLXOXthkvG4qsafb.3RAag.7fd/aCz1u",
-      "makeSurePassword": "ewqeqwsa",
-      "name": "dsa",
-      "phone": "547",
-      "address": "dsa",
-      "id": "b8RrISp"
-    },
-    {
-      "email": "d@gmail.com",
-      "password": "$2a$10$GZRB296iY6rrpP57gceOq.rc.MLD3oq.MqhZ67gLlXkruKzPcr//2",
-      "id": "hfipXEn"
-    },
-    {
-      "email": "ewqewq@gmail.com",
-      "password": "$2a$10$nAHrb/p/sYh.mmptoN/I6eCMw4.flhtFPDC0C97jkzhnEjtVeFpqK",
-      "makeSurePassword": "wwww",
-      "name": "dsadsa",
-      "phone": "454564",
-      "address": "sadsadsadsa",
-      "id": "ju1lv_w"
-    },
-    {
-      "email": "qqqqqqq@gmail.com",
-      "password": "$2a$10$aM00KaJTIKeW3y1ywlKzmu9GWf6YeIatpzgrkWjhFBn9XBRXOscsK",
-      "makeSurePassword": "qqweqw",
-      "name": "qqqqqq",
-      "phone": "4545446",
-      "address": "dsadsadsadsa",
-      "id": "aEQ1rqX"
-    },
-    {
-      "email": "dassssss@gmail.com",
-      "password": "$2a$10$23PN9egz4txSDE8rk.MLRO9I.glvJ.xqZjXo/fpw3WJytsUCfYY7i",
-      "makeSurePassword": "qqqq",
-      "name": "dsadsadsa",
-      "phone": "45454545",
-      "address": "ddadsadsadsa",
-      "id": "wwVQes2"
-    },
-    {
-      "email": "dddddd@gmail.com",
-      "password": "$2a$10$Y6S7UikM8taYBHjhCd3NieBA.Jlfi3m7Ic1IapyIl8SMh7LO.XZYK",
-      "makeSurePassword": "aaaaa",
-      "name": "dsa",
-      "phone": "45",
-      "address": "54",
-      "id": "vk05Wsm"
-    },
-    {
-      "email": "dddddddd@gmail.com",
-      "password": "$2a$10$nRrzHIqjUHNaisg.ezwSTuHtDVE6VjqWjhnEE72jwsANHkHfmIpmC",
-      "makeSurePassword": "aaaaa",
-      "name": "dsa",
-      "phone": "45",
-      "address": "54",
-      "id": "aI_kLqI"
-    },
-    {
-      "email": "dsadsadsadsa@gmail.com",
-      "password": "$2a$10$nw5ULkQMKCh88BaNgGM5cu9hhxa4rebq4TYLX5UDsawE11pl36TUW",
-      "makeSurePassword": "wwww",
-      "name": "dai",
-      "phone": "4445456",
-      "address": "eqweqweqw",
-      "id": "5qA5uuW"
-    },
-    {
-      "email": "ewqeqweqw@gmail.com",
-      "password": "$2a$10$seS5D6Sy1e.6j3CR5CaGH.9ySJ54CoZzliu5yi4YrNaihOCy3xC2a",
-      "makeSurePassword": "qqqqq",
-      "name": "aaaa",
-      "phone": "45646456",
-      "address": "sda",
-      "id": "zr_Nker"
-    },
-    {
-      "email": "dsddadsadsadsa@gmail.com",
-      "password": "$2a$10$OdUc99LJK5jeb7NcNiCef.LWboFGlAcOSgdGTg6ZlSC4JqLyg2SHC",
-      "makeSurePassword": "wwww",
-      "name": "dai",
-      "phone": "4445456",
-      "address": "eqweqweqw",
-      "id": "7bh6_ZF"
-    },
-    {
-      "email": "eqweqweqwe@gmail.com",
-      "password": "$2a$10$e00VM/NGZbmqL/ic.OETFO7k9lRo/IbJ43maWgI4kE0BtVskyQ.ly",
-      "makeSurePassword": "qqqqq",
-      "name": "dsadsa",
-      "phone": "4545469",
-      "address": "dsadsa",
-      "id": "MV8EEch"
-    },
-    {
-      "email": "ewqeqwedsadsaqw@gmail.com",
-      "password": "$2a$10$/vkKgSjv8MRovLpWySqrquLhfA4XnT2LEuGv5AoxCH8IN5ljce/9q",
-      "makeSurePassword": "qqqqq",
-      "name": "dseqw",
-      "phone": "45456454564",
-      "address": "dsadsadsa",
-      "id": "kAmd5qX"
-    },
-    {
-      "email": "ewqeqweqweqw@gmail.com",
-      "password": "$2a$10$3sM9szRL6aTz37XsrumP7.OS9lZzD2.ox4ZOwD7OTHb95G7Alxg2e",
-      "makeSurePassword": "qqqqq",
-      "name": "ddd",
-      "phone": "454564664",
-      "address": "dasdsadsa",
-      "id": "kd97zrJ"
-    },
-    {
-      "email": "ewqeqdsadsaweqweqw@gmail.com",
-      "password": "$2a$10$GzDBKkbo5aZFg5qrqTDARehM2Tj6UF1Hd1YCLMF0W6PNzoheCoOQC",
-      "makeSurePassword": "qqqqq",
-      "name": "ddd",
-      "phone": "454564664",
-      "address": "dasdsadsa",
-      "id": "fmvHfuT"
-    },
-    {
-      "email": "ewqeqddsadsasadsaweqweqw@gmail.com",
-      "password": "$2a$10$vrM1vTITcwZHrQC9j071MuJzEsMwYsshq/uGIMrRazpf.8gwl5ady",
-      "makeSurePassword": "qqqqq",
-      "name": "ddd",
-      "phone": "454564664",
-      "address": "dasdsadsa",
-      "id": "uhyCBwY"
-    },
-    {
-      "email": "ewqeqddsadcxzczxsasadsaweqweqw@gmail.com",
-      "password": "$2a$10$wSn/cDuf68RGZUx1bfw7HO7zwEPHxM2dywFWbUV1TpuJvP3IkwVUS",
-      "makeSurePassword": "qqqqq",
-      "name": "ddd",
-      "phone": "454564664",
-      "address": "dasdsadsa",
-      "id": "JbOVrbQ"
-    },
-    {
-      "email": "ewqeqddsadcxczxczxzczxsasadsaweqweqw@gmail.com",
-      "password": "$2a$10$6U33MZA.0KPPUR2RlMzt4.AZra78zyXoRh2YzWV6bOKBMHSsIwUxK",
-      "makeSurePassword": "qqqqq",
-      "name": "ddd",
-      "phone": "454564664",
-      "address": "dasdsadsa",
-      "id": "rrLHCaY"
-    },
-    {
-      "email": "dsadsa@gmail.com",
-      "password": "$2a$10$vBBVWvw2O6K0GLk3pDhqbeA9Uj9jG9IJo9HdB1FHyvhd8h2U4Pv4O",
-      "makeSurePassword": "qqqq",
-      "name": "dsadsa",
-      "phone": "4545646",
-      "address": "dasdsadsa",
-      "id": "BGAYG_9"
-    },
-    {
-      "email": "agfhghjgf@gmail.com",
-      "password": "$2a$10$QEw6BhgSTEGpMqHydOhaj.dDf/Qrq.Tp7xh3TFqj2tgsdDJE7Fbc.",
-      "makeSurePassword": "ssdsad",
-      "name": "qqd",
-      "phone": "45456465",
-      "address": "dsa",
-      "id": "LLeBAwv"
-    },
-    {
-      "email": "ascxz@gmail.com",
-      "password": "$2a$10$oPxRtKYvQIDA0aBf3v8co.6fx1t4D06jzPkwpzcd69i3tCn3VoFZi",
-      "makeSurePassword": "qweqweq",
-      "name": "qqq",
-      "phone": "64564564",
-      "address": "wqeqw",
-      "id": "0p3C7vv"
-    },
-    {
-      "email": "dsadsad@gmail.com",
-      "password": "$2a$10$i2FbPJf87ZG9SEiU7RY3uehwQoo/Yb1P3HSXFWi0M0UNKKQHPigUC",
-      "id": "sP_HqA3"
-    },
-    {
-      "email": "austindsadsa@gmail.com",
-      "password": "$2a$10$w/qha9yIWorYPsvOywDOOe00cohDsTcxDgNguNdNxJQfCB8xQNcAm",
-      "id": "kLeHG2r"
-    },
-    {
-      "email": "zxczxczxczxczx@gmail.com",
-      "password": "$2a$10$UFKSVgPoJpoppJpmSSjNBuDNypI.GPXI3kJAqYOybmLg9/g/B62eK",
-      "makeSurePassword": "dsas",
-      "name": "xczxczx",
-      "phone": "5445645646",
-      "address": "dsadsadsa",
-      "id": "xB-nHzX"
-    },
-    {
-      "email": "qqqq@gmail.com",
-      "password": "$2a$10$9FG9zJ9e6QQHPlQkJIWB7OgHxQQ9A4G.oMOZ/.udEJKOp3My7/DWu",
-      "id": "cWyAY6R"
+      "phone": "0975444111",
+      "address": "新北市新莊",
+      "id": "r6KaoGZ"
     }
   ],
-  "commets": [
-    {
-      "id": 1,
-      "message": "你好阿",
-      "name": "john",
-      "email": "abc123@gmail.com"
-    }
+  "subscribes": [
+  ],
+  "comments": [
   ],
   "products": [
     {
       "id": "1",
       "category": "路亞竿",
-      "date": "2022/12/25",
-      "title": "月下美人MX/MXAJING",
-      "content": "新一代的「月下美人 EX」與前期款式相比雖然少了點華麗感，但是進化腳步可沒停下。「月下美人EX」合計推出4款型號，型號陣容可對應Aji與Mebaru等海水小物魚種，其中型號68L-T是唯一的空心尾型號，510UL-S.Q以及66L-S・Q專精對應Jig Head等鉛釣組，另外2款假餌對應種類則相對泛用。竿體最外層包覆X45 Full Shield並採用SVF NANOPLUS碳纖素材，竿體接繼處(印籠繼)導入Joint α強化過節順暢度，同時透過ESS(Expert Sence Simulation)系統檢視竿體設計。搭載配件當然也都是輕量化訴求，導環規格選用AGS-TYPE-R款式並以CWS(Carbon Wrapping System)技術綁置固定，EVA素材分離式握把的體積也相當精簡，捲線器座則選用最新式的ZERO SEAT款式，全型號竿體自重控制在43~51g之間，其輕量化表現不僅是超越前期的AGS EX款，與他廠頂級竿款相比也毫不遜色。DAIWA表示新一代的「「月下美人EX」從竿體、導環以及捲線器座進行全面更新，操控性及感度是月下美人系列史上最優異的款式，建議售價￥63,000~66, 000。",
-      "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/08/daiwa_Gekka_EX_0.jpg?ssl=1",
-      "price": 2199
+      "date": "2023/7/9",
+      "title": "DayStar.86L/3P BASIC DEVICE",
+      "content": "「DayStar.86L/3P & 96ML/3P BASIC DEVICE」 2款型號繼數皆採3pcs設定(並繼)，竿體調性為硬挺取向的Fast設定，但標榜在博魚過程仍可彎曲竿體有效緩衝，並配置柔軟取向的空心Tip以利掌握微小的咬餌訊號。而在配件方面，導環就產品照來看應是配製Fuji K型導環，內環素材則是選用Alconite材質，手把採用EVA素材分離式手把，為了達到輕量化目的，將不必要的用料予以省略，2款型號自重各別為98g以及122g，其輕量化表現的確相當不錯，同時2款型號都適合對應COREMAN自家所有假餌，也就是Jighead、Metal Vibration、Tail Spinner以及Jig等金屬系假餌。",
+      "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/08/coreman_daystar_CDS86L3P_BASIC-DEVICE_0.jpg?ssl=1",
+      "price": 5600
     },
     {
       "id": "2",
       "category": "路亞竿",
       "date": "2023/4/9",
       "title": "性能大躍進 APIA Foojin’RS 海鱸竿",
-      "content": "手把系統為APIA自家開發，標榜其手把外型相當符合人體工學。APIA表示以往海鱸竿為了因應PE線的低延伸特性，竿體素材都以低彈性及中彈性碳纖素材為主，帶來缺點就是操控精度與拋投距離較為不足，然而「Foojin’RS」透過Toray T1100G以及中高彈性碳纖素材的結合，不僅兼容PE線特性還能有效消除前述問題，是款拋投性能有別於以往的新世代海鱸竿款，建議售價¥39,000~44,000。",
+      "content": "手把系統為APIA自家開發，標榜其手把外型相當符合人體工學。APIA表示以往海鱸竿為了因應PE線的低延伸特性，竿體素材都以低彈性及中彈性碳纖素材為主，帶來缺點就是操控精度與拋投距離較為不足，然而「Foojin’RS」透過Toray T1100G以及中高彈性碳纖素材的結合，不僅兼容PE線特性還能有效消除前述問題，是款拋投性能有別於以往的新世代海鱸竿款。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/09/apia_foojin_rs_0.png?ssl=1",
       "price": 7400
     },
@@ -296,7 +39,7 @@
       "category": "路亞竿",
       "date": "2023/5/8",
       "title": "岸拋Tenya對應 DAIWA NEOSTAGE TT 太刀專用竿",
-      "content": "「NEOSTAGE TT」推出89M以及93M共2款型號，竿體以X45結構為主體並導入具有奈米技術的HVF NANOPLUS碳纖素材，其他配件包含到Fuji K型導環、EVA素材分離式手把以及DAIWA獨創AIR SENSOR捲線器座，用料規格算是中高等級。而DAIWA認為以應對岸拋太刀Tenya而言，使用海鱸竿會因為自重較重以及手把較長導致操作費力，餌木竿的Tip則是過於硬挺，「NEOSTAGE TT」正是解決前述問題的專用竿款，Tip柔軟、腰身有力、手把長度適中，提供最適合對應岸拋Tenya的設計，建議售價¥31,500~32,500。",
+      "content": "「NEOSTAGE TT」推出89M以及93M共2款型號，竿體以X45結構為主體並導入具有奈米技術的HVF NANOPLUS碳纖素材，其他配件包含到Fuji K型導環、EVA素材分離式手把以及DAIWA獨創AIR SENSOR捲線器座，用料規格算是中高等級。而DAIWA認為以應對岸拋太刀Tenya而言，使用海鱸竿會因為自重較重以及手把較長導致操作費力，餌木竿的Tip則是過於硬挺，「NEOSTAGE TT」正是解決前述問題的專用竿款，Tip柔軟、腰身有力、手把長度適中，提供最適合對應岸拋Tenya的設計。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/07/daiwa_NEOSTAGE_TT_0.jpg?ssl=1",
       "price": 2999
     },
@@ -305,7 +48,7 @@
       "category": "路亞竿",
       "date": "2023/5/22",
       "title": "入門首選 DAIWA EGING X 餌木竿",
-      "content": "「EGING X」共計推出4款型號，全型號竿體Butt段採用Branding X編織碳帶包覆補強，藉以抑制竿體扭曲量，可對應餌木號數小至#1.8大至#4.0，無論是想玩輕餌或重餌，都可在這系列竿款中找到對應型號。而在配件方面，包含Fuji不鏽鋼框K型導環、Fuji VSS捲線器座以及EVA素材分離式手把，DAIWA除了給好餌木釣的基礎配備，建議售價也僅有¥12,000，讓初學者有個低負擔的入門選擇。",
+      "content": "「EGING X」共計推出4款型號，全型號竿體Butt段採用Branding X編織碳帶包覆補強，藉以抑制竿體扭曲量，可對應餌木號數小至#1.8大至#4.0，無論是想玩輕餌或重餌，都可在這系列竿款中找到對應型號。而在配件方面，包含Fuji不鏽鋼框K型導環、Fuji VSS捲線器座以及EVA素材分離式手把，DAIWA除了給好餌木釣的基礎配備。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/06/daiwa_EGING-X_2.jpg?ssl=1",
       "price": 4500
     },
@@ -314,7 +57,7 @@
       "category": "路亞竿",
       "date": "2023/5/30",
       "title": "超旗艦規格 Clear Blue Crystar63BF-Premier 根魚竿",
-      "content": "「Crystar55BF-Master」長度6’3″，竿體全身採用Torayca M40X素材打造而成，並且近乎全身式包覆4軸編織碳布補強，僅有Tip(空心尾)局部區段未包覆補強，竿體接繼則是採用高精度印籠繼設計。配件部分包含Fuji ECS捲線器座以及EVA素材分離式手把，導環規格除了選用Fuji鈦框TZ & SiC-S導環之外，此款槍柄型號與自家的Crystar55BF-Master一樣也是採用旋轉導環配置。適用假餌重量0.5~10g，標榜操控微型Jig Head、硬餌或者金屬餌都能得心應手，相較於Crystar55BF-Master，此款型號的泛用度相對是更高，但是售價也是更驚人，建議售價¥81,950。",
+      "content": "「Crystar55BF-Master」長度6’3″，竿體全身採用Torayca M40X素材打造而成，並且近乎全身式包覆4軸編織碳布補強，僅有Tip(空心尾)局部區段未包覆補強，竿體接繼則是採用高精度印籠繼設計。配件部分包含Fuji ECS捲線器座以及EVA素材分離式手把，導環規格除了選用Fuji鈦框TZ & SiC-S導環之外，此款槍柄型號與自家的Crystar55BF-Master一樣也是採用旋轉導環配置。適用假餌重量0.5~10g，標榜操控微型Jig Head、硬餌或者金屬餌都能得心應手，相較於Crystar55BF-Master，此款型號的泛用度相對是更高。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/05/Crystar63BF_premier_0.png?ssl=1",
       "price": 3200
     },
@@ -323,25 +66,25 @@
       "category": "路亞竿",
       "date": "2023/6/30",
       "title": "堅固好用！餌木猿 SARU STICK 餌木竿",
-      "content": "竿體採用綠色塗裝並配置軟木素材分離式手把，自重111g。官方表示型號HSS-79(Power：ML)適用於小範圍淺場，HSS-84(Power：M)則是對應深場，HSS-91可說是加長型HSS-84。而此竿款更吸引人的應該就是價格，餌木猿過去的竿款動輒3萬日幣起跳，甚者達到5萬日幣以上，但透過省略高規用料的採用(如四軸碳布、TZ素材內環)，入手門檻降低到3萬日幣以下，建議售價￥23,500~25,500(HSS-91 未公開售價)。",
+      "content": "竿體採用綠色塗裝並配置軟木素材分離式手把，自重111g。官方表示型號HSS-79(Power：ML)適用於小範圍淺場，HSS-84(Power：M)則是對應深場，HSS-91可說是加長型HSS-84。而此竿款更吸引人的應該就是價格，餌木猿過去的竿款動輒3萬日幣起跳，甚者達到5萬日幣以上，但透過省略高規用料的採用(如四軸碳布、TZ素材內環)。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/04/hayashi_ikatsuri_special_saru_stick_0.jpg?ssl=1",
       "price": 999
     },
     {
       "id": "7",
       "category": "路亞竿",
-      "date": "2023/7/06",
-      "title": "WILD SIDE基因派生 LEGIT DESIGN WILD SIDE VARIANT Bass竿",
-      "content": "「WILD SIDE VARIANT」共推出2款直柄以及2款槍柄型號(全型號1pc)，調性設定以MF為主，僅有WSS-ST510UL/TZ 為F設定，以型號陣容而言除了型號WSC-ST70H/TZ VARIANT之外，另外3款型號皆是對應微餌。竿體設計標榜將24t、30t、33t、40t以及46t等各種等級的碳纖素材，視各型號竿體的需求給予正確配置，並延續WILD SIDE系列的特色導入Aramid纖維強化竿體(Belly~Butt段)韌性，竿體素材配置全型號為碳纖維80%、Aramid Fiber 10%以及玻璃纖維 5%，此外WSC-ST70H/TZ以及WSS-ST510UL這2款型號搭載30t碳纖素材製成的實心尾，提供柔軟且精確的操作性能 。配件方面，導環規格選用Fuji鈦框TZ素材內環，與同尺寸的SiC內環相比更為輕量化且內徑更大，配合 LEGIT DESIGN 獨創配置標榜能讓釣竿性能獲得最大發揮，捲線器座則選用Fuji ECS(槍柄)以及VSS(直柄)款式，表面並施以防滑塗裝，搭載的分離式手把選用硬質EVA素材，並手把局部區段特別採用淺灰配色以增添色彩層次，另外「WILD SIDE VARIANT」相較於WILDSIDE系列其他竿款，竿體輕量化表現看似也獲得了進步，建議售價¥45,000~48,000。",
-      "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/10/legitdesign_WILDSIDE-VARIANT_1.png?ssl=1",
-      "price": 1500
+      "date": "2023/10/30",
+      "title": "惡魔舞者 Golden Mean DEMON DANCER 船拋青物竿",
+      "content": "「DEMON DANCER」合計推出3款型號並分別應對小、中、大型魚種，全型號接繼採1本半設定，竿體採原創Cross Wrapping碳布包覆藉以強化操作性及遠投能力，型號DDS-70採Regular Fast調性，DDS-80則為Regular調性，DDS-76強調遠投及操竿靈活度。配件方面包含Fuji不鏽鋼框Alconite K型導環、EVA素材手把以及Fuji DPS-18雙鎖式捲線器座，型號DDS-70以及DD-76的竿體自重與Crossbow II相比略微增加，但是DDS-80則大幅減輕29g。Golden Mean表示「DEMON DANCER」繼承Crossbow II的竿體用料，並重組竿體與各配件的平衡，不僅提供更輕快的操餌及拋投手感，同時兼具力搏大魚的力量。",
+      "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/08/golden_mean_demon_dancer_0.png?ssl=1",
+      "price": 2400
     },
     {
       "id": "8",
       "category": "捲線器",
       "date": "2023/5/6",
       "title": "理想進化 DAIWA CALDIA 2018 紡車捲線器",
-      "content": "「CALDIA 2018」一如既往地有完整型號可對應一般岸釣需求，並且5000~6000型號似乎是14年式所沒有的，外型設計也維持一貫的典雅質感。而首要賣點當然就是LT理念所帶來的性能提升，不僅將各部諸元輕量化並且更集中組裝，內部零組件也是有所強化，使全型號自重減輕約30g，剎車系統更新為ATD(Automatic Tournament Drag)系統，各型號最大剎車值也有2~4kg的提升，可提升拋投距離的LC-ABS新式杯緣設計同樣也搭載於「CALDIA 2018」身上，至於防塵防水仍是藉由MAGSEALED磁油密封系統來把關，此次改款幅度就如自家其他幾種一樣相當有感，建議售價￥21,900~29,500。",
+      "content": "「CALDIA 2018」一如既往地有完整型號可對應一般岸釣需求，並且5000~6000型號似乎是14年式所沒有的，外型設計也維持一貫的典雅質感。而首要賣點當然就是LT理念所帶來的性能提升，不僅將各部諸元輕量化並且更集中組裝，內部零組件也是有所強化，使全型號自重減輕約30g，剎車系統更新為ATD(Automatic Tournament Drag)系統，各型號最大剎車值也有2~4kg的提升，可提升拋投距離的LC-ABS新式杯緣設計同樣也搭載於「CALDIA 2018」身上，至於防塵防水仍是藉由MAGSEALED磁油密封系統來把關，此次改款幅度就如自家其他幾種一樣相當有感。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2018/04/daiwa_caldia_2018_1.jpg",
       "price": 5000
     },
@@ -350,7 +93,7 @@
       "category": "捲線器",
       "date": "2023/6/6",
       "title": "SUPER FAST！SHIMANO VANFORD 紡車捲線器",
-      "content": "「VANFORD」一次推出14款機型(2000~5000型)供釣友選購，機身以及全新MGL Rotor全採用CI4+素材打造而成，並搭載第二代MICROMOUDLE微牙齒輪、SILENT DRIVE以及G FREE BODY提供細緻輕快的捲動感受，線杯採用Long Stroke設計提升遠投能力，防水機能則配置X PROTECT規格，以多重幾何結構加上潑水處理，阻隔外水入滲機身以及Roller內部，標榜Roller可因此提升5倍的耐久度，機身自重控制在150~220g之間，其輕量化表現完全是高階機種等級。做為STRADIC CI4+ 16的後繼機種，「VANFORD」新增非常多項的全新機能，結合輕量化與精緻運轉來貫徹”SUPER FAST”的訴求，建議售價¥30,000~34,000，若綜觀整體機能再與Vanquish 19相比，CP值真是相當的高阿。",
+      "content": "「VANFORD」一次推出14款機型(2000~5000型)供釣友選購，機身以及全新MGL Rotor全採用CI4+素材打造而成，並搭載第二代MICROMOUDLE微牙齒輪、SILENT DRIVE以及G FREE BODY提供細緻輕快的捲動感受，線杯採用Long Stroke設計提升遠投能力，防水機能則配置X PROTECT規格，以多重幾何結構加上潑水處理，阻隔外水入滲機身以及Roller內部，標榜Roller可因此提升5倍的耐久度，機身自重控制在150~220g之間，其輕量化表現完全是高階機種等級。做為STRADIC CI4+ 16的後繼機種，「VANFORD」新增非常多項的全新機能，結合輕量化與精緻運轉來貫徹”SUPER FAST”的訴求，，若綜觀整體機能再與Vanquish 19相比，CP值真是相當的高阿。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2020/08/shimano_vanford_0.png?ssl=1",
       "price": 4000
     },
@@ -359,7 +102,7 @@
       "category": "捲線器",
       "date": "2023/6/6",
       "title": "暴力黑蛛 DAIWA TATULA TW 300/400 雙軸梭式捲線器",
-      "content": "「TATULA TW 300/400」如品名所示有300以及400型機種，300型有6.3&8.1兩種捲比，而400型則有6.3 & 7.1 & 8.1三種捲比可以選購，300型具備#5 PE/160m的線容量，400型可達到#6 PE/180m，線容量真是給好給滿。而DAIWA在針對近期新款雙軸機種提出HYPERDRIVE設計理念，主要就是追求耐久性與順暢性的提升，機身以及側蓋皆為鋁合金材質打造，內部小齒輪(Pinion Gear)兩端以滾珠軸承支撐，並搭載俗稱鳥仔的PERFECT DOUBLE STOPPER，制動方面則採用UTD系統，捲比XH型號最大剎車力為11kg，其他捲比皆達到13kg，為藉由多項高強度配備搭以對應淡海水大魚，暴力程度海放過去的TATULA HD，看來還可以與Abu Garcia的大型雙軸梭式互別苗頭阿，建議售價¥37,000~38,500。",
+      "content": "「TATULA TW 300/400」如品名所示有300以及400型機種，300型有6.3&8.1兩種捲比，而400型則有6.3 & 7.1 & 8.1三種捲比可以選購，300型具備#5 PE/160m的線容量，400型可達到#6 PE/180m，線容量真是給好給滿。而DAIWA在針對近期新款雙軸機種提出HYPERDRIVE設計理念，主要就是追求耐久性與順暢性的提升，機身以及側蓋皆為鋁合金材質打造，內部小齒輪(Pinion Gear)兩端以滾珠軸承支撐，並搭載俗稱鳥仔的PERFECT DOUBLE STOPPER，制動方面則採用UTD系統，捲比XH型號最大剎車力為11kg，其他捲比皆達到13kg，為藉由多項高強度配備搭以對應淡海水大魚，暴力程度海放過去的TATULA HD，看來還可以與Abu Garcia的大型雙軸梭式互別苗頭阿。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2020/11/Daiwa_tatula_300_400_0.jpg?ssl=1",
       "price": 6100
     },
@@ -368,7 +111,7 @@
       "category": "捲線器",
       "date": "2023/6/6",
       "title": "新世代微餌機種DAIWA STEEZ AIR TW雙軸梭式捲線器",
-      "content": "「STEEZ AIR TW」 首推6.8以及9.1兩種捲比，各捲比設定都有左右捲可以選購，首先機體輕量化表現相當突出，緊湊機身的自重僅僅只有135g，用超輕量化來形容一點也不為過，拋投制動力的調節旋鈕與STEEZ CT SV TW一樣設置在側蓋下端。而這款雙軸找來知名改裝品牌K.T.F.共同開發，所以線杯可謂是最大賣點，採用G1 DURALUMIN素材打造而成的AIR Spool直徑僅有28mm，過往的ALPHAS AIR STREAM CUSTOM 、 T3 AIR以及 SS AIR等AIR系列機種的線杯直徑都是30mm以上，其Spool的超高迴轉能力加上TWS線規的相輔相成，DAIWA號稱「STEEZ AIR TW」 是新世代微拋旗艦機種，尤其是AIR系列有搭載TWS線規大概要追溯到7年前的T3 AIR，因此 AIR X TWS的組合也算是賣點之一，最後，DAIWA都說是旗艦機種了，售價當然不會客氣，建議售價 ￥68,000。喔！差點忘了提醒「STEEZ AIR TW」 是淡水專用喔~",
+      "content": "「STEEZ AIR TW」 首推6.8以及9.1兩種捲比，各捲比設定都有左右捲可以選購，首先機體輕量化表現相當突出，緊湊機身的自重僅僅只有135g，用超輕量化來形容一點也不為過，拋投制動力的調節旋鈕與STEEZ CT SV TW一樣設置在側蓋下端。而這款雙軸找來知名改裝品牌K.T.F.共同開發，所以線杯可謂是最大賣點，採用G1 DURALUMIN素材打造而成的AIR Spool直徑僅有28mm，過往的ALPHAS AIR STREAM CUSTOM 、 T3 AIR以及 SS AIR等AIR系列機種的線杯直徑都是30mm以上，其Spool的超高迴轉能力加上TWS線規的相輔相成，DAIWA號稱「STEEZ AIR TW」 是新世代微拋旗艦機種，尤其是AIR系列有搭載TWS線規大概要追溯到7年前的T3 AIR，因此 AIR X TWS的組合也算是賣點之一 差點忘了提醒「STEEZ AIR TW」 是淡水專用喔~",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2019/11/daiwa_steez_air_tw_0.jpg?w=800&ssl=1",
       "price": 3500
     },
@@ -386,7 +129,7 @@
       "category": "捲線器",
       "date": "2023/6/6",
       "title": "禁得起考驗 SHIMANO STRADIC SW 紡車捲線器",
-      "content": "「STRADIC SW」首推4000~5000機型，捲比從PG至XG都有，鋁合金機體及精密冷間鍛造齒輪提供高強度性能，並有搭載X PROTECT防水機能，運用多重幾何結構加上特殊潑水料以阻隔外水入滲Roller Clutch以及Line Roller，剎車墊片採用碳纖素材規格，手把握丸則為CI4+素材製成，雖然整體規格當然不比STELLA SW或者TWINPOWER SW，但SHIMANO認為整體機能搭配所具備的性能，已足以應對高強度作釣的考驗，無論是岸釣或者船釣皆是，建議售價¥32,000，預計於5月份即正式上市，。",
+      "content": "「STRADIC SW」首推4000~5000機型，捲比從PG至XG都有，鋁合金機體及精密冷間鍛造齒輪提供高強度性能，並有搭載X PROTECT防水機能，運用多重幾何結構加上特殊潑水料以阻隔外水入滲Roller Clutch以及Line Roller，剎車墊片採用碳纖素材規格，手把握丸則為CI4+素材製成，雖然整體規格當然不比STELLA SW或者TWINPOWER SW，但SHIMANO認為整體機能搭配所具備的性能，已足以應對高強度作釣的考驗，無論是岸釣或者船釣皆是，預計於5月份即正式上市。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2018/02/shimano_STRADIC_SW_0.jpg",
       "price": 9999
     },
@@ -395,7 +138,7 @@
       "category": "捲線器",
       "date": "2023/6/6",
       "title": "輕量感受SHIMANO STRADIC CI4+紡車捲線器",
-      "content": "「STRADIC CI4+」首先在配色上就採以紅色與STRADIC做區隔，握丸外型也更有設計感，整體機能包含X-SHIP齒輪系統、G FREE BODY、COREPROTECT防水設計等機能則與STRADIC大致相同，主要差異在於採用2016年相當主打的MGL Rotor，藉以降低慣性以獲得更好的操作性，另外有別於STRADIC採用的HAGANE合金機身，「STRADIC CI4+」機身改採碳纖素材CI4+打造，包含Rotor也是相同素材製成，根據官網所提供的自重數據，「STRADIC CI4+」與STRADIC相比大約有40~50g的自重差異，輕量化表現相當顯著，SHIMANO宣稱藉由低慣性機能MGL Rotor、G FREE BODY以及CI4+輕量化素材的組合，其操作靈敏度更勝以往。但相對的，要獲得輕盈的操控感受，勢必得多花點銀兩，建議售價調漲至¥30,000~33, 000之間，與前款有6, 000多日幣的價差。",
+      "content": "「STRADIC CI4+」首先在配色上就採以紅色與STRADIC做區隔，握丸外型也更有設計感，整體機能包含X-SHIP齒輪系統、G FREE BODY、COREPROTECT防水設計等機能則與STRADIC大致相同，主要差異在於採用2016年相當主打的MGL Rotor，藉以降低慣性以獲得更好的操作性，另外有別於STRADIC採用的HAGANE合金機身，「STRADIC CI4+」機身改採碳纖素材CI4+打造，包含Rotor也是相同素材製成，根據官網所提供的自重數據，「STRADIC CI4+」與STRADIC相比大約有40~50g的自重差異，輕量化表現相當顯著，SHIMANO宣稱藉由低慣性機能MGL Rotor、G FREE BODY以及CI4+輕量化素材的組合，其操作靈敏度更勝以往。但相對的，要獲得輕盈的操控感受，勢必得多花點銀兩。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2016/03/shimano_stradicci4_0.jpg",
       "price": 6400
     },
@@ -404,7 +147,7 @@
       "category": "路亞餌",
       "date": "2023/1/12",
       "title": "軟質魅力 JACKALL GALVIBE",
-      "content": "「GALVIBE」長度88mm重量22.1g，本體採用軟質素材製成，標榜可抑制釣鉤撞擊本體的聲音，降低高壓釣場Bass的戒心，製造出的波動感也是硬餌無法達到的效果，配重塊安裝於本體前端下巴處，透過集中重心獲得穩定的拋投姿態以及遠投效果，同時也有利於探索底部，如果害怕掛底，官方建議可將腹鉤拆卸下來使用。此外JACKALL提到勿將此款Vibration與其他軟餌或者硬餌放在一起，可能會發生染色或溶解的悲劇，建議售價¥1,265。",
+      "content": "「GALVIBE」長度88mm重量22.1g，本體採用軟質素材製成，標榜可抑制釣鉤撞擊本體的聲音，降低高壓釣場Bass的戒心，製造出的波動感也是硬餌無法達到的效果，配重塊安裝於本體前端下巴處，透過集中重心獲得穩定的拋投姿態以及遠投效果，同時也有利於探索底部，如果害怕掛底，官方建議可將腹鉤拆卸下來使用。此外JACKALL提到勿將此款Vibration與其他軟餌或者硬餌放在一起，可能會發生染色或溶解的悲劇。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/10/jackall_GALVIBE_1.png?ssl=1",
       "price": 500
     },
@@ -413,7 +156,7 @@
       "category": "路亞餌",
       "date": "2023/5/20",
       "title": "全魚種完全對應 Fish Arrow VT-JACK 230",
-      "content": "「VT-JACK 230」長度230mm重量80g，浮力設定雖然是Floating，但最大下潛深度可以達到2.5m，位於本體前端下巴的扣環可以用來掛上鉛組進行增重，因此從水面到水下都是這款大餌的誘魚範圍，下潛游動時本體會接近水平姿態並靈活的滾動，本體末端搭載DRT廠製V-Tail創造獨特波動，頭部的仿香魚擬真設計也是十分精緻，Fish Arrow表示這是一款以全魚種對應概念所開發出的Vibration Plug，建議售價￥4,700。",
+      "content": "「VT-JACK 230」長度230mm重量80g，浮力設定雖然是Floating，但最大下潛深度可以達到2.5m，位於本體前端下巴的扣環可以用來掛上鉛組進行增重，因此從水面到水下都是這款大餌的誘魚範圍，下潛游動時本體會接近水平姿態並靈活的滾動，本體末端搭載DRT廠製V-Tail創造獨特波動，頭部的仿香魚擬真設計也是十分精緻，Fish Arrow表示這是一款以全魚種對應概念所開發出的Vibration Plug。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/10/fish_arrow_vtjk230_3.png?ssl=1",
       "price": 300
     },
@@ -422,7 +165,7 @@
       "category": "路亞餌",
       "date": "2023/5/22",
       "title": "黑鯛特仕 Megabass POPPING DUCK",
-      "content": "「POPPING DUCK」長度60mm重量6.5g，標榜使用0.8號線可以達到40m以上的拋投距離，Hook eye採用轉圜配置以降低脫鉤機率，獨特開口設計在抑制前進距離的情況下，還能在水面發出黑鯛喜歡的清脆聲響，在海水與汽水域都能有效發揮誘魚能力，Megabass表示此款水表餌從浮力、配重、動態及聲音，都是為了黑鯛所精心設計，建議售價￥1,530。",
+      "content": "「POPPING DUCK」長度60mm重量6.5g，標榜使用0.8號線可以達到40m以上的拋投距離，Hook eye採用轉圜配置以降低脫鉤機率，獨特開口設計在抑制前進距離的情況下，還能在水面發出黑鯛喜歡的清脆聲響，在海水與汽水域都能有效發揮誘魚能力，Megabass表示此款水表餌從浮力、配重、動態及聲音，都是為了黑鯛所精心設計。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/08/megabass_POPPING-DUCK-_0.jpg?ssl=1",
       "price": 450
     },
@@ -431,7 +174,7 @@
       "category": "路亞餌",
       "date": "2023/5/22",
       "title": "顫動吧！issei SPEED SARDINE Urume Vibe",
-      "content": "「SPEED SARDINE Urume Vibe」長度90mm重量30g，本體背部提供3處Line eye讓釣手可以視自身需求做調整，Line eye由前至後分別對應高速、基本、慢速，本體姿態穩定不易纏線，僅需捲線收回就能製造誘魚效果，標榜其動態表現猶如真實的沙丁魚在逃竄一般，腹部部分還有提供一處可以增加釣鉤或者亮片等配備的空間，建議售價¥1,200。",
+      "content": "「SPEED SARDINE Urume Vibe」長度90mm重量30g，本體背部提供3處Line eye讓釣手可以視自身需求做調整，Line eye由前至後分別對應高速、基本、慢速，本體姿態穩定不易纏線，僅需捲線收回就能製造誘魚效果，標榜其動態表現猶如真實的沙丁魚在逃竄一般，腹部部分還有提供一處可以增加釣鉤或者亮片等配備的空間。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/09/issei_speed_sardine_0.png?ssl=1",
       "price": 1200
     },
@@ -440,7 +183,7 @@
       "category": "路亞餌",
       "date": "2023/5/22",
       "title": "高誘惑力實現 DUO ROUGH TRAIL BUBBLY 225F",
-      "content": "「ROUGH TRAIL BUBBLY 225F」長度225mm重量95g，重心採用固定式重心配置，為了對應青物、鮪魚以及GT等大型魚種，內部採用補強肋結構設計並配置高強度一體連貫鋼絲，落水後角度接近90度，細長本體提供的遠投力足以滿足船拋需求，操餌過程中不僅能製造強烈的聲響及泡沫，本體也會隨之擺動產生反光視覺，建議售價¥4,378。",
+      "content": "「ROUGH TRAIL BUBBLY 225F」長度225mm重量95g，重心採用固定式重心配置，為了對應青物、鮪魚以及GT等大型魚種，內部採用補強肋結構設計並配置高強度一體連貫鋼絲，落水後角度接近90度，細長本體提供的遠投力足以滿足船拋需求，操餌過程中不僅能製造強烈的聲響及泡沫，本體也會隨之擺動產生反光視覺。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/07/ROUGH-TRAIL-BUBBLY-225F_0.png?ssl=1",
       "price": 899
     },
@@ -449,7 +192,7 @@
       "category": "路亞餌",
       "date": "2023/5/22",
       "title": "大搖大擺 Megabass MEGADOG-X",
-      "content": "「MEGADOG-X」長度180mm重量2.1/2oz(約70g)，同系列的他款水表瞬間變成小朋友，Megabass為了提升這款大型水表的靈活度，本體內部配置雙慣性平衡系統(Double Inertial Balancer System)以及往復平衡系統(Seesaw Balancing system)，讓本體無時無刻都能正常且輕鬆地在水表進行長距離滑移動態。然而這項產品其實與海水用的MEGADOG 180幾近相同，但是MEGADOG 180在Line eye以及Hook eye方面的設計強度更高，配置的Triple hook款式也不同，該怎選購很明顯就是就取決於個人對於強度的要求，建議售價￥3,960。",
+      "content": "「MEGADOG-X」長度180mm重量2.1/2oz(約70g)，同系列的他款水表瞬間變成小朋友，Megabass為了提升這款大型水表的靈活度，本體內部配置雙慣性平衡系統(Double Inertial Balancer System)以及往復平衡系統(Seesaw Balancing system)，讓本體無時無刻都能正常且輕鬆地在水表進行長距離滑移動態。然而這項產品其實與海水用的MEGADOG 180幾近相同，但是MEGADOG 180在Line eye以及Hook eye方面的設計強度更高，配置的Triple hook款式也不同，該怎選購很明顯就是就取決於個人對於強度的要求。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/05/megadog_X_0.png?ssl=1",
       "price": 450
     },
@@ -458,45 +201,13 @@
       "category": "路亞餌",
       "date": "2023/5/22",
       "title": "魚群視覺 BREADEN 13VIB/CatheyMersey",
-      "content": "「13VIB/CatheyMersey」分別有57mm/20g以及74mm/40g兩款尺寸，為了營造出一群小魚在海中遊蕩的視覺效果，BREADEN在每個Triple Hook上面安裝3片旋轉葉片，其概念有點類似Alabama Rig，另外本體背部配置4處Line eye，最前端的Line eye可讓本體以無振動方式快速直行，而後面3處Line eye則可讓本體有擺動效果，越後面的Line eye擺動效果越大，釣手可依自身使用需求隨時調整動態表現，建議售價￥1,200。",
+      "content": "「13VIB/CatheyMersey」分別有57mm/20g以及74mm/40g兩款尺寸，為了營造出一群小魚在海中遊蕩的視覺效果，BREADEN在每個Triple Hook上面安裝3片旋轉葉片，其概念有點類似Alabama Rig，另外本體背部配置4處Line eye，最前端的Line eye可讓本體以無振動方式快速直行，而後面3處Line eye則可讓本體有擺動效果，越後面的Line eye擺動效果越大，釣手可依自身使用需求隨時調整動態表現。",
       "images": "https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/05/13VIBCatheyMersey_0.png?ssl=1",
       "price": 480
     }
   ],
-  "bookMarks": [],
-  "carts": [
-    {
-      "productId": "13",
-      "qty": 9,
-      "userId": "3IPEtGR",
-      "id": 1,
-      "cartId": "1"
-    }
+  "carts": [],
+  "bookMarks": [
   ],
-  "orders": [
-    {
-      "createdAt": 1669186792906,
-      "info": {
-        "email": "dev@admin.me",
-        "username": "",
-        "address": ""
-      },
-      "items": [
-        {
-          "productId": "1",
-          "qty": 7,
-          "title": "帶你無痛提升 JavaScript 面試力",
-          "price": 230
-        },
-        {
-          "productId": "2",
-          "qty": 5,
-          "title": "8 天重新認識 JavaScript！",
-          "price": 290
-        }
-      ],
-      "userId": "1",
-      "id": 1
-    }
-  ]
+  "orders": []
 }

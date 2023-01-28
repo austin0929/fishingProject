@@ -8,27 +8,20 @@ let productTitle = document.querySelector(".productTitle")
 //購物車超過第二筆中斷
 let addCartBreak = []
 
-let baseUrl = "http://localhost:3000";
 let productUrl = baseUrl + "/products"
 
 
 let getCartList = []
 let productList = []
 
-function localCartId(addCartId) {
-    localStorage.setItem('cartId', addCartId);
-}
-
-// let getToken = localStorage.getItem("token");
-// let token = JSON.stringify("Bearer " + getToken);
-// axios.defaults.headers.common["Authorization"] = token;
 
 const init = () => {
     getIndexSearch()
     cartList()
-    const AUTH = `Bearer ${localStorage.getItem('token')}`;
-    axios.defaults.headers.common.Authorization = AUTH;
+    //token
+    AUTH
 }
+
 
 //儲存localStorageId
 function setLocalStorageId(id) {
@@ -43,15 +36,22 @@ const getIndexSearch = () => {
             let str = ''
             productList = res.data
             productList.forEach((item => {
-                let searchTitle = getLocalStorage
-                productTitle.textContent = searchTitle
-                if (getLocalStorage == item.category) {
+                if (getLocalStorage == undefined) {
                     str += renderProductHTML(item)
                 }
+                else if (getLocalStorage == item.category) {
+                    let searchTitle = getLocalStorage
+                    productTitle.textContent = searchTitle
+                    str += renderProductHTML(item)
+                }
+                return
             }))
             productListDom.innerHTML = str
+            localStorage.removeItem("category")
         }))
 }
+
+
 
 
 //組字串
@@ -66,23 +66,18 @@ let renderProductHTML = (item) => {
                             <div class="h6 mb-2">
                                 <a href="#" class="bg-danger p-1 rounded">${item.category}</a>
                             </div>
-                         <span>$${item.price}</span>
-                         <div>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star"></i>
-                            <i class="fa-sharp fa-solid fa-star text-secondary"></i>
-                         </div>
+
+                         <span>$${toThousands(item.price)}</span>
+                      
                          </div>
                          <div class="ms-auto pe-lg-3 pe-2 pb-1 cartIcon d-flex  align-items-end h-100">
                             <a href="#" data-productId="${item.id}">
-                                <i class="fa-sharp fa-solid fa-cart-shopping text-third js-addCartBtn" data-productId="${item.id}" data-addCartID="${item.id}"></i>
+                                <i class="fa-sharp fa-solid fa-cart-shopping text-third js-addCartBtn" data-productId="${item.id}"></i>
                             </a>
                          </div>
                            </div>
                      </a>
-                    </li> `
+                    </li>`
 }
 
 //點擊category篩選
@@ -102,8 +97,6 @@ categoryBtn.addEventListener("click", e => {
     }))
 })
 
-
-
 //監聽產品事件
 productListDom.addEventListener("click", e => {
     e.preventDefault()
@@ -120,16 +113,22 @@ productListDom.addEventListener("click", e => {
         window.location.replace('productsDetail.html');
     }
 
+
     //判斷後加入購物車
     if (e.target.classList.contains("js-addCartBtn")) {
         let productId = e.target.getAttribute("data-productId")
         let productNum = 1;
 
-        getCartList.forEach((item=>{
+        getCartList.forEach((item => {
             if (item.productId === productId) {
                 productNum = item.qty++
             }
         }))
+
+        if (getLocalStorageUserId == undefined) {
+            Swal.fire('請先登入', '請先完成登入後操作', 'error')
+            return
+        }
 
         //判斷是否超過兩筆
         getCartList.filter(function (value) {
@@ -140,44 +139,47 @@ productListDom.addEventListener("click", e => {
         if (addCartBreak.length > 0) {
             addCartBreak.splice(0, 50)
             Swal.fire('重複加入', '請去購物車操作', 'error')
-             cartDelay()
+            cartDelay()
             return
         }
         console.log(addCartBreak);
-           
+
         const data = {
             productId: productId,
             qty: productNum
-    }
-
+        }
         console.log(productNum, productId);
-        axios.post(addCartUrl,data)
+        axios.post(addCartUrl, data)
             .then((res => {
                 console.log(res);
                 Swal.fire('加入購物車', '你已成功加入購物車', 'success')
                 init()
+            })).catch((error=>{
+                console.log(error);
+                if (error.response.data === "jwt expired") {
+                    Swal.fire('登入逾時', '時間到！請登出後重新登入！', 'error')
+                }
+                if (error.response.data === "jwt malformed") {
+                    Swal.fire('請登入後操作！')
+                }
             }))
     }
 })
 
 //get購物車api
-const cartList =()=>{
+const cartList = () => {
     axios.get(`${baseUrl}/carts`)
-    .then((res=>{
-        getCartList = res.data
-        getCartList.forEach((item=>{
-            localCartId(item.id)    
+        .then((res => {
+            getCartList = res.data
         }))
-    }))
 }
 
-const cartDelay = ()=>{
+const cartDelay = () => {
     setTimeout(() => {
         window.location.replace('carts.html');
     }, 2000);
 }
 
-//http://localhost:3000/carts/1?_expand=user
 
 
 init()

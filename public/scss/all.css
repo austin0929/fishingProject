@@ -15030,6 +15030,14 @@ body {
     font-size: 20px;
   }
 }
+.fa-star {
+  color: gold;
+}
+
+.text-yellow {
+  color: gold;
+}
+
 .outSideLine {
   height: 3rem;
   line-height: 48px;
@@ -15061,6 +15069,7 @@ body {
   width: 92px;
   height: 50px;
   border-radius: 8px;
+  padding-top: 10px;
 }
 
 .search {
@@ -15096,6 +15105,22 @@ body {
   background-size: cover;
   background-position: center center;
   height: 320px;
+  width: 100%;
+}
+
+.cardImg2 {
+  background-image: url("https://i0.wp.com/www.lurebus.com/wp-content/uploads/2022/09/issei_speed_sardine_0.png?ssl=1");
+  background-size: cover;
+  background-position: center center;
+  height: 200px;
+  width: 100%;
+}
+
+.cardImg3 {
+  background-image: url("https://i0.wp.com/www.lurebus.com/wp-content/uploads/2018/12/daiwa_MORETHAN_PE_TW_0.jpg?w=600&ssl=1");
+  background-size: cover;
+  background-position: center center;
+  height: 200px;
   width: 100%;
 }
 
@@ -15501,9 +15526,37 @@ body {
 }
 
 .memberImg {
-  width: 60px;
-  height: 60px;
-  border-radius: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.memberUserData {
+  position: relative;
+}
+
+.fa-camera {
+  position: absolute;
+  left: 145px;
+  bottom: 20px;
+  background: #087BE6;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.memberUserData .memberCameraIcon:hover {
+  cursor: pointer;
+}
+
+.memberCameraIcon {
+  position: absolute;
+  bottom: 35px;
+  left: 145px;
+  width: 40px;
+  height: 40px;
 }
 
 @media (max-width: 767.98px) {
@@ -15557,9 +15610,13 @@ body {
 .progress2 li {
   list-style-type: none;
   float: left;
-  width: 25%;
+  width: 33.333%;
   position: relative;
   text-align: center;
+}
+
+.progress2 {
+  width: 100%;
 }
 
 .progress2 li:before {
@@ -15623,17 +15680,14 @@ body {
   content: none;
 }
 
-.progress2 li.active,
 .progress2 li.done {
   color: #087BE6;
 }
 
-.progress2 li.active:before,
 .progress2 li.done:before {
   border-color: #087BE6;
 }
 
-.progress2 li.active + li:after,
 .progress2 li.done + li:after {
   background-color: #087BE6;
 }
@@ -15678,4 +15732,40 @@ body {
   background: #FFFFFF;
   box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.05);
   border-radius: 40px;
+}
+
+.orderTable {
+  border: 1px solid #000000;
+  width: 100%;
+}
+
+.orderTable th,
+.orderTable td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #000000;
+}
+
+.orderItemDeleteBtn {
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  padding: 3px;
+}
+
+.orderItemDeleteBtn:hover {
+  background-color: rgb(206, 0, 34);
+}
+
+.orderTableWrap {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.orderTableWrap::-webkit-scrollbar {
+  display: none;
 }/*# sourceMappingURL=all.css.map */

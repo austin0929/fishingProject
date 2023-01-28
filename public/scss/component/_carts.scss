@@ -1,10 +1,13 @@
  .progress2 li {
      list-style-type: none;
      float: left;
-     width: 25%;
+     width: 33.333%;
      position: relative;
      text-align: center;
  }
+.progress2{
+    width: 100%;
+}
 
  .progress2 li:before {
      font-family: "Font Awesome 5 Free";
@@ -59,20 +62,18 @@
      content: none;
  }
 
- .progress2 li.active,
  .progress2 li.done {
      color: #087BE6;
  }
 
- .progress2 li.active:before,
  .progress2 li.done:before {
      border-color: #087BE6;
  }
 
- .progress2 li.active+li:after,
  .progress2 li.done+li:after {
      background-color: #087BE6;
  }
+
 @media (max-width: 767.98px) {
     .cartProduct {
             width: 26%;
