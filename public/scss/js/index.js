@@ -6,8 +6,6 @@ const subscribesBtn = document.querySelector(".subscribesBtn")
 const subscribesBtnInp = document.querySelector(".subscribesBtnInp")
 let indexUrl = baseUrl + "/products?category"
 
-
-
 function localStorageCategory({category}) {
     localStorage.setItem('category',category);
 }
@@ -49,7 +47,3 @@ subscribesBtn.addEventListener("click",e=>{
         console.log(error);
     }))
 })
-
-
-
-
