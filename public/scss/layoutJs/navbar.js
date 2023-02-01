@@ -10,7 +10,7 @@ const navInit =()=>{
 
 let getLocalUserName = localStorage.getItem('userName')
 
-//判斷登入初始化
+//判斷登入狀態
 let getLoginData = ()=>{
     if (localStorageUserId == null) {
         loginSubmit.textContent = "登入"
@@ -52,6 +52,7 @@ loginSubmit.addEventListener("click",e=>{
     navDelay()
 })
 
+//三秒後跳轉
 const navDelay = ()=>{
     setTimeout(() => {
         window.location.replace('index.html') 
