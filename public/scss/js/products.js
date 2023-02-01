@@ -5,16 +5,13 @@ let productTagReel = document.querySelector(".productTagReel")
 let productTagLure = document.querySelector(".productTagLure")
 let productTitle = document.querySelector(".productTitle")
 
-//購物車超過第二筆中斷
 let addCartBreak = []
-
 let productUrl = baseUrl + "/products"
-
-
 let getCartList = []
 let productList = []
 
 
+//初始化
 const init = () => {
     getIndexSearch()
     cartList()
@@ -27,6 +24,8 @@ const init = () => {
 function setLocalStorageId(id) {
     localStorage.setItem('productId', id);
 }
+
+let getLocalStorageUserId = localStorage.getItem("userId")
 
 //首頁搜尋初始
 const getIndexSearch = () => {
@@ -54,7 +53,7 @@ const getIndexSearch = () => {
 
 
 
-//組字串
+//組產品字串
 let renderProductHTML = (item) => {
     return ` <li class="col-xl-3 col-lg-4 col-md-6 mb-3">
                        <a href="productsDetail.html" class="js-productCard">
@@ -71,8 +70,8 @@ let renderProductHTML = (item) => {
                       
                          </div>
                          <div class="ms-auto pe-lg-3 pe-2 pb-1 cartIcon d-flex  align-items-end h-100">
-                            <a href="#" data-productId="${item.id}">
-                                <i class="fa-sharp fa-solid fa-cart-shopping text-third js-addCartBtn" data-productId="${item.id}"></i>
+                            <a href="#">
+                                <i class="fa-sharp fa-solid fa-cart-shopping text-third" data-addCartBtn="addBtn" data-productId="${item.id}"></i>
                             </a>
                          </div>
                            </div>
@@ -97,74 +96,37 @@ categoryBtn.addEventListener("click", e => {
     }))
 })
 
-//監聽產品事件
-productListDom.addEventListener("click", e => {
+//加入購物車
+productListDom.addEventListener("click",e=>{
     e.preventDefault()
-
-    //取使用者ID
-    let getLocalStorageUserId = localStorage.getItem("userId")
-
-    let addCartUrl = `${baseUrl}/600/users/${getLocalStorageUserId}/carts`;
-
-    //判斷後進去產品介紹
-    if (e.target.classList.contains("cardImg")) {
+        if (e.target.classList.contains("cardImg")) {
         let productId = e.target.getAttribute("data-productId")
         setLocalStorageId(productId)
         window.location.replace('productsDetail.html');
     }
-
-
-    //判斷後加入購物車
-    if (e.target.classList.contains("js-addCartBtn")) {
-        let productId = e.target.getAttribute("data-productId")
-        let productNum = 1;
-
-        getCartList.forEach((item => {
-            if (item.productId === productId) {
-                productNum = item.qty++
-            }
-        }))
-
-        if (getLocalStorageUserId == undefined) {
-            Swal.fire('請先登入', '請先完成登入後操作', 'error')
-            return
-        }
-
-        //判斷是否超過兩筆
-        getCartList.filter(function (value) {
-            if (value.productId == e.target.getAttribute("data-productId")) {
-                addCartBreak.push(value.productId)
-            }
-        })
-        if (addCartBreak.length > 0) {
-            addCartBreak.splice(0, 50)
-            Swal.fire('重複加入', '請去購物車操作', 'error')
-            cartDelay()
-            return
-        }
-        console.log(addCartBreak);
-
-        const data = {
-            productId: productId,
-            qty: productNum
-        }
-        console.log(productNum, productId);
-        axios.post(addCartUrl, data)
-            .then((res => {
-                console.log(res);
-                Swal.fire('加入購物車', '你已成功加入購物車', 'success')
-                init()
-            })).catch((error=>{
-                console.log(error);
-                if (error.response.data === "jwt expired") {
-                    Swal.fire('登入逾時', '時間到！請登出後重新登入！', 'error')
-                }
-                if (error.response.data === "jwt malformed") {
-                    Swal.fire('請登入後操作！')
-                }
-            }))
+    let target = e.target.dataset
+    let productId = target.productid
+    let addBtn = target.addcartbtn
+    let num = 0;
+    if (addBtn === "addBtn") {
+        num +=1
+        productPost(productId, num)
     }
 })
+const productPost = (productId, num)=>{
+    let addCartUrl = `${baseUrl}/600/users/${getLocalStorageUserId}/carts`
+    let data = {
+        productId: productId,
+        qty: num     
+    }
+    axios.post(addCartUrl,data)
+    .then((res=>{
+        console.log(res);
+        Swal.fire('加入購物車', '成功加入購物車', 'success')
+    })).catch((error=>{
+        console.log(error);
+    }))
+}
 
 //get購物車api
 const cartList = () => {
@@ -173,13 +135,6 @@ const cartList = () => {
             getCartList = res.data
         }))
 }
-
-const cartDelay = () => {
-    setTimeout(() => {
-        window.location.replace('carts.html');
-    }, 2000);
-}
-
 
 
 init()
