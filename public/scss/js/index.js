@@ -12,6 +12,7 @@ function localStorageCategory({category}) {
     localStorage.setItem('category',category);
 }
 
+//關鍵字搜尋
 searchBtn.addEventListener("click",e=>{
     e.preventDefault()
     let searchData = []
@@ -30,6 +31,7 @@ searchBtn.addEventListener("click",e=>{
         }))
 })
 
+//訂閱功能
 subscribesBtn.addEventListener("click",e=>{
     if (validateEmail(subscribesBtnInp.value) == false) {
         Swal.fire('格式有誤', '請檢察信箱格式', 'error')

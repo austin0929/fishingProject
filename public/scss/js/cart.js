@@ -4,7 +4,7 @@ const totalPrice = document.querySelector(".totalPrice")
 const orderBtn = document.querySelector(".orderBtn")
 
 let cartListData = []
-
+let localUserId = localStorage.getItem("userId")
 const cartInit = () => {
     getCartList()
 }
@@ -24,37 +24,30 @@ const renderCartHTML = (item) => {
                                     <p class="pt-lg-2">${item.product.title}</p>
                                     </div>
                                 </td>
-                                <td>NT$${item.product.price}</td>
+                                <td>NT$${toThousands(item.product.price)}</td>
                                 <td>
                                     <div class="cartNum d-flex">
                                         <a href="#" >
-                                            <i class="fa-solid fa-minus fa-xl text-black" data-reduceNum="${item.productId}" data-cartId="${item.id}"></i>
+                                            <i class="fa-solid fa-minus fa-xl text-black js-reduce" data-status="minus" data-reduceNum="${item.productId}" data-cartId="${item.id}"></i>
                                         </a>
-                                        <span class="d-inline-block mx-1">${item.qty}</span>
+                                        <span class="d-inline-block mx-1 number">${item.qty}</span>
                                         <a href="#">
-                                            <i class="fa-sharp fa-solid fa-plus fa-xl text-black" data-addNum="${item.productId}" data-cartId="${item.id}"></i>
+                                            <i class="fa-sharp fa-solid fa-plus fa-xl text-black js-add" data-status="plus" data-addNum="${item.productId}" data-cartId="${item.id}"></i>
                                         </a>
                                     </div>
                                 </td>
-                                <td>NT$${item.product.price * item.qty}</td>
+                                <td>NT$${toThousands(item.product.price * item.qty)}</td>
                                 <td class="deleteCartItemBtn">
                                     <a href="#" class="cartDeleteIcon">
-                                    <i class="fa-solid fa-trash-can cartDelete text-center ms-3 text-third pe-2" data-deleteCartId="${item.id}"></i>
+                                    <i class="fa-solid fa-trash-can cartDelete text-center ms-3 text-third pe-2" data-btn="delete" data-deleteCartId="${item.id}"></i>
                                     </a>
                                 </td>
-                            </tr> 
-                            
-                            `
+                            </tr>`
 }
-
-
-
 
 
 // 產品列表購物車初始化
 let getCartList = ()=>{
-    let localCartId = localStorage.getItem("cartId")
-    let localUserId = localStorage.getItem("userId")
     let totalMoney =0
     axios.get(`${baseUrl}/users/${localUserId}/carts?_expand=product`)
     .then((res=>{
@@ -63,121 +56,87 @@ let getCartList = ()=>{
         cartListData.forEach((item=>{
             totalMoney += item.qty * item.product.price
             let getTotalPrice = "NT$" + totalMoney
-            totalPrice.textContent = getTotalPrice
+            totalPrice.textContent = toThousands(getTotalPrice)
             str += renderCartHTML(item)
         }))
         cartsListDom.innerHTML = str
+    })).catch((error => {
+        console.log(error);
     }))
 }
 
-//購物車單筆刪除
-cartsListDom.addEventListener("click",e=>{
-    e.preventDefault()
-    let localUserId = localStorage.getItem("userId")
-    let localCartId = localStorage.getItem("cartId")
-    let id = e.target.getAttribute("data-deleteCartId")
-    
-    if (e.target.classList.contains("cartDelete")) {
-        console.log(id);
-        axios.delete(`${baseUrl}/carts/${id}`)
-        .then((res=>{
-            console.log(res);
+//增減商品數量
+cartsListDom.addEventListener("click", function (e) {
+    e.preventDefault();
+    let target = e.target.dataset;
+    let status = target.status;
+    let cartId = target.cartid;
+    console.log( target);
+    axios.get(`${baseUrl}/carts/${cartId}`)
+    .then((res=>{
+        console.log(res);
+        let reviseQuantity = res.data.qty;
+        if (status === "plus") {
+            reviseQuantity++;
+            console.log(reviseQuantity);
+        }
+        else if (status === "minus"){
+            if (reviseQuantity == 1) {
+                Swal.fire('數量不可低於1','請檢察數量', 'error')
+                return;
+            }
+            else{
+                reviseQuantity --;
+            }
+        }
+        patchProductNum(cartId, reviseQuantity);
+    })).catch(function (error) {
+        console.log(error);
+    });
+});
+function patchProductNum(cartId, reviseQuantity) {
+    console.log(cartId, reviseQuantity);
+    const data = {
+        qty: reviseQuantity
+    }
+    axios.patch(`${baseUrl}/carts/${cartId}`,data)
+        .then(function (response) {
+            console.log(response);
             getCartList()
-        }))
-    }
-})
-
-//監聽點擊位置
-cartsListDom.addEventListener("click",e=>{
-    e.preventDefault()
-    let reduceNum = e.target.getAttribute("data-reduceNum")
-    let addNum = e.target.getAttribute("data-addNum")
-    let cartId = e.target.getAttribute("data-cartId")
-    if (e.target.classList.contains("fa-minus")) {
-        reduceNumData(reduceNum,cartId)
-        return
-    }
-    if (e.target.classList.contains("fa-plus")) {
-        addNumData(addNum, cartId)
-        return
-    }
-})
-
-//減少數量
-const reduceNumData = (reduceNum,cartId)=>{
-    let reductNumCheck = 0
-    cartListData.forEach((item=>{
-        if (reduceNum == item.productId) {
-        reductNumCheck =  item.qty -=1
-        }
-        if (reductNumCheck < 1) {
-            return
-        }
-        const data = {
-            cartId: item.id,
-            qty: reductNumCheck
-        }
-        
-         axios.patch(`${baseUrl}/carts/${cartId}`, data)
-            .then((res => {
-                console.log(item);
-  
-                getCartList()
-            }))
-    }))
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }
 
-//添加數量
-const addNumData = (addNum, cartId) => {
-    let addNumCheck = 0
-    cartListData.forEach((item => {
-        if (addNum == item.productId) {
-            addNumCheck = item.qty += 1
-        }
-        if (addNumCheck < 1 ) {
-            return
-        }
-        const data = {
-            cartId : item.id,
-            qty: addNumCheck
-        }
-        axios.patch(`${baseUrl}/carts/${cartId}`, data)
-            .then((res => {
-                console.log(item);
-               
-                getCartList()
-            }))
-    }))
+//刪除購物車商品
+cartsListDom.addEventListener("click", function (e) {
+    e.preventDefault();
+    let target = e.target.dataset;
+    let cartId = target.deletecartid;
+    console.log(target)
+    if (target.btn === "delete") {
+        deleteCartItem(cartId);
+    } else {
+        return;
+    }
+});
+function deleteCartItem(cartId) {
+    axios
+        .delete(`${baseUrl}/carts/${cartId}`)
+        .then(function (response) {
+            console.log(response);
+            getCartList()
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }
 
 //前往訂單運送 訂單資料從運送頁面post送出到orders
 orderBtn.addEventListener("click",e=>{
     e.preventDefault()
-//     if (e.target.classList.contains("orderBtn")) {
-//         cartListData.forEach((item=>{
-//             const data = {
-//                 id: item.product.id,
-//                title: item.product.title,
-//                createdAt: item.product.date,
-//                price: item.product.price,
-//                category: item.product.category,
-//                qty: item.qty,
-//                userId: item.userId
-//             }
-//             axios.post(`${baseUrl}/600/orders`, data)
-//             .then((res=>{
-//                 console.log(res);
-//   window.location.replace('cartDelivery.html');
-//             })).catch((error=>{
-//                 if (error.response.data === "jwt expired") {
-//                     Swal.fire('登入逾時', '時間到！請登出後重新登入！', 'error')
-//                 }
-//                 if (error.response.data === "jwt malformed") {
-//                     Swal.fire('請登入後操作！')
-//                 }
-//             }))
-//         }))
-//     }
+
     window.location.replace('cartDelivery.html');
 
 })

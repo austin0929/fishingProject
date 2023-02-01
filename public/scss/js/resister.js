@@ -9,7 +9,7 @@ let registerUrl = baseUrl + "/register"
 console.log(registerUrl);
 
 
-
+//取得使用者輸入值後post到資料庫
 let register =()=>{
     if (registerMail.value == "" || registerPassword.value == "" || registerMakeSurePassword.value == "" ||
         registerName.value == "" || registerPhone.value == "" || registerAddress.value == "") {
@@ -44,6 +44,7 @@ let register =()=>{
     }))
 }
 
+//送出後清空字串
 const cleanRegisterInp=()=>{
      registerMail = document.querySelector(".registerMail").value =""
     registerPassword = document.querySelector(".registerPassword").value =""
@@ -53,12 +54,14 @@ const cleanRegisterInp=()=>{
     registerAddress = document.querySelector(".registerAddress").value = ""
 }
 
+//三秒後跳轉
 const registerDelay =()=>{
     return setTimeout(() => {
             window.location.replace('login.html');
     }, 3000);
 }
 
+//初始化
 const init= ()=>{
     send.addEventListener("click", () => register())
 }

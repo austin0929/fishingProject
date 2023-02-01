@@ -1,5 +1,6 @@
 const commentList = document.querySelector(".commentList")
 const commentTxt = document.querySelector(".commentTxt")
+const saveCommentsBtn = document.querySelector(".saveCommentsBtn")
 let usersList  =[]
 
 //token
@@ -41,14 +42,13 @@ for (let i = 0; i < stars.length; i++) {
 
 
 const getUserData  = ()=>{
-    axios.get(`http://localhost:3000/users`)
+    axios.get(`${baseUrl}/users`)
     .then((res=>{
        usersList = res.data
      
     }))
 }
 
-const saveCommentsBtn = document.querySelector(".saveCommentsBtn")
 saveCommentsBtn.addEventListener("click", e => {
     const localStorageUserId = localStorage.getItem("userId")
     let productId = localStorage.getItem('productId');
@@ -70,7 +70,7 @@ saveCommentsBtn.addEventListener("click", e => {
                 userImg : item.userImg
             }
             console.log(data);
-            axios.post(`http://localhost:3000/600/comments`, data)
+            axios.post(`${baseUrl}/600/comments`, data)
                 .then((res => {
                     console.log(res);
                     Swal.fire('留言成功', '去看看大家的留言吧', 'success')

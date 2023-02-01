@@ -8,11 +8,12 @@ let editRegisterAddress = document.querySelector(".editRegisterAddress")
 
 let memberUserId =  localStorage.getItem('userId');
 
-
+//初始化
 let editMemberInit = ()=>{
     getMemberData()
 }
 
+//取得輸入的值 並直接渲染在畫面上
 const getMemberData = ()=>{
     axios.get(`${baseUrl}/users/${memberUserId}`)
     .then((res=>{
@@ -24,6 +25,7 @@ const getMemberData = ()=>{
     }))
 }
 
+//更改使用者資料
 editMemberBtn.addEventListener("click",e=>{
     e.preventDefault()
     if (editRegisterPassword.value == "" && editRegisterMakeSurePassword.value == "") {
@@ -53,6 +55,7 @@ editMemberBtn.addEventListener("click",e=>{
     }))
 })
 
+//三秒後跳轉
 const editMemberDeley =()=>{
     setTimeout(() => {
         window.location.replace("index.html")

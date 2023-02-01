@@ -1,22 +1,21 @@
 const productsDetail = document.querySelector(".productsDetail")
 let productDetailUrl = baseUrl + "/products"
 
-// let commentListData = document.querySelector(".commentList")
 let commentData = []
 let productDetailItem = []
 let cartList = []
 let bookmarkList = []
 
+//初始化
 const init = () => {
     getProductDetailData()
     getCartList()
     getBookmarks()
     getUserComment()
-    
-    //token
-    AUTH
 }
 
+//token
+AUTH
 
 let getLocalUserId = () => {
     return localStorage.getItem("userId") || 0;
@@ -195,53 +194,31 @@ const getCartList = () => {
         }))
 }
 
-//購物車數量patch
+//購物車post到cart
 productsDetail.addEventListener("click", e => {
     e.preventDefault()
     let getId = e.target.getAttribute("data-addCartId")
     if (e.target.classList.contains("js-cartId")) {
-          patchCart(getId)
+        postCart(getId)
     }
 })
+const postCart = (getId)=>{
+    let cartNum = 0;
+    let getUserId = localStorage.getItem("userId")
+    if (cartNum === 0) {
+        let data = {
+            productId: getId,
+            qty: cartNum +=1
+        }
+        axios.post(`${baseUrl}/600/users/${getUserId}/carts`,data)
+        .then((res=>{
+            console.log(res);
+            Swal.fire('加入購物車', '成功加入購物車', 'success')
 
-//產品介紹添加數量
-const patchCart = (getId)=>{
-    let list = []
-    let cartNum = 1;
-    cartList.forEach((item => {
-        console.log(getId, item.productId);
-        if (getId == item.productId) {
-            cartNum = item.qty += 1
-            list.push({productId : item.productId})
-        }
-        else if (list.length == 0) {
-            Swal.fire('購物車無此項目', '請到商品專區添加', 'error')   
-            return
-        }
-        else {
-            return
-        }
-        const data = {
-            qty: cartNum,
-            productId: getId
-        }
-        console.log(item.id);
-   
-        console.log(data);
-        axios.patch(`${baseUrl}/600/carts/${item.id}`, data)
-            .then((res => {
-                console.log(res);
-                Swal.fire('成功', '產品數量已新增', 'success')   
-                getCartList()
-            })).catch((error => {
-                if (error.response.data === "jwt expired") {
-                    Swal.fire('登入逾時', '時間到！請登出後重新登入！', 'error')
-                }
-                if (error.response.data === "jwt malformed") {
-                    Swal.fire('請登入後操作！')
-                }
-            }))
-    }))
+        })).catch((error=>{
+            console.log(error);
+        }))
+    }
 }
 
 
@@ -287,7 +264,7 @@ productsDetail.addEventListener("click", e => {
                     Swal.fire('登入逾時', '時間到！請登出後重新登入！', 'error')
                 }
                 if (error.response.data === "jwt malformed") {
-                    Swal.fire('請登入後操作','請重新登入', 'error')
+                    Swal.fire('請登入後操作', '請重新登入', 'error')
                 }
             }))
     }
