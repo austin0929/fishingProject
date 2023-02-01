@@ -12,7 +12,6 @@ function saveUserToLocal({ accessToken, user}) {
     localStorage.setItem('state', user.state)
     localStorage.setItem('email', user.email)
 }
-
 //登入功能
 let loginPage =()=>{
     if (loginEmail.value =="" || loginPassword.value =="") {
