@@ -5,10 +5,9 @@ const memberMail = document.querySelector(".memberMail")
 const memberPhone = document.querySelector(".memberPhone")
 const memberAddress = document.querySelector(".memberAddress")
 const memberName = document.querySelector(".memberName")
+let userImgList = []
 
-
-let userImgList = ''
-
+//初始化
 const memberInit = () => {
     getMemberUserData()
 
@@ -36,15 +35,9 @@ console.log(file);
                 }
                 getMemberUserData()
             })).catch((error=>{
-                if (error.response.data === "jwt expired") {
-                    Swal.fire('登入逾時', '時間到！請登出後重新登入！', 'error')
-                }
-                if (error.response.data === "jwt malformed") {
-                    Swal.fire('請登入後操作！')
-                }
+                console.log(error);
             }))
     }
-       
 });
 
 //user圖初始化
