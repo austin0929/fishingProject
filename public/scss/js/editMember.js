@@ -5,7 +5,6 @@ let editRegisterMakeSurePassword = document.querySelector(".editRegisterMakeSure
 let editRegisterName = document.querySelector(".editRegisterName")
 let editTregisterPhone = document.querySelector(".editTregisterPhone")
 let editRegisterAddress = document.querySelector(".editRegisterAddress")
-
 let memberUserId =  localStorage.getItem('userId');
 
 //初始化
@@ -61,5 +60,4 @@ const editMemberDeley =()=>{
         window.location.replace("index.html")
     }, 3000);
 }
-
 editMemberInit()
