@@ -7,15 +7,17 @@ let productUrl = baseUrl + "/products"
 let bookmarkList = []
 let productList =[]
 
+//初始化
 const init = ()=>{
     getBookmarkList()
 }
 
+//取使用者ID
 let getLocalUserId = () => {
     return localStorage.getItem("userId") || 0;
 }
 
-//renderBookmarkHTML
+//render書籤頁面
 const renderBookmarkHTML = (item)=>{
     return ` <li class="col-xl-3 col-lg-4 col-md-6 mb-3">
                        <a href="#">
@@ -27,7 +29,7 @@ const renderBookmarkHTML = (item)=>{
                             <div class="h6 mb-2">
                                 <a href="#" class="bg-danger p-1 rounded">${item.category}</a>
                             </div>
-                        <span>$${item.price}</span>
+                        <span>$${toThousands(item.price)}</span>
                         </div>
                         <div class="ms-auto pe-lg-2 pb-2 cartIcon d-flex  align-items-end h-100">
                             <a href="#" class="btn btn-success text-light js-bookmarkBtn" data-deleteBookmarkId="${item.id}">取消收藏
@@ -72,7 +74,7 @@ bookmarkListDom.addEventListener("click",e=>{
                         Swal.fire('登入逾時', '時間到！請登出後重新登入！', 'error')
                     }
                     if (error.response.data === "jwt malformed") {
-                        Swal.fire('請登入後操作！')
+                        Swal.fire('請登入後操作')
                     }
                 }))
             }
@@ -80,7 +82,7 @@ bookmarkListDom.addEventListener("click",e=>{
     }
 })
 
-//篩選書籤
+//篩選書籤category
 categoryBtn.addEventListener("click",e=>{
     e.preventDefault()
     let str =''
