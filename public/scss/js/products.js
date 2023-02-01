@@ -135,6 +135,4 @@ const cartList = () => {
             getCartList = res.data
         }))
 }
-
-
 init()
