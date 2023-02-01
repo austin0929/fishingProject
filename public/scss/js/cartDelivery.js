@@ -76,7 +76,8 @@ const bulidOrderData = () => {
             transportPhone.value = ""
             transportAddress.value =""
             transportEmail.value =""
-            window.location.replace('cartOrderDone.html');
+            Swal.fire('訂購成功', '三秒後跳轉首頁', 'success')
+            cartDeliveryDelay()
         })).catch((error => {
             if (error.response.data === "jwt expired") {
                 Swal.fire('登入逾時', '時間到！請登出後重新登入！', 'error')
@@ -92,8 +93,10 @@ const axiosDeleteCart = (cartId = 0) => {
     const url = `${baseUrl}/600/carts/${cartId}`
     return axios.delete(url);
 }
+//把整理過的資料參數帶入
 const sendOrder = (orderData) => {
     const data = orderData;
+    console.log(data);
     axios.post(`${baseUrl}/orders`, data)
         .then((res => {
             console.log(res);
@@ -127,5 +130,9 @@ const sendOrder = (orderData) => {
         }))
 }
 
-
-
+//三秒後跳轉頁面
+const cartDeliveryDelay=()=>{
+    setTimeout(() => {
+        window.location.replace('index.html');
+    }, 3000);
+}
