@@ -1,14 +1,15 @@
 const commentList = document.querySelector(".commentList")
 const commentTxt = document.querySelector(".commentTxt")
+const saveCommentsBtn = document.querySelector(".saveCommentsBtn")
 let usersList  =[]
 
 //token
 AUTH
 
-//star
+//星星評論功能
 const stars = document.querySelector(".rating").children;
 let ratingValue
-let index //目前選到的星星
+let index 
 
 for (let i = 0; i < stars.length; i++) {
     stars[i].addEventListener("mouseover", function () {
@@ -39,7 +40,7 @@ for (let i = 0; i < stars.length; i++) {
     })
 }
 
-
+//get使用者資料
 const getUserData  = ()=>{
     axios.get(`${baseUrl}/users`)
     .then((res=>{
@@ -48,7 +49,7 @@ const getUserData  = ()=>{
     }))
 }
 
-const saveCommentsBtn = document.querySelector(".saveCommentsBtn")
+//post留言板
 saveCommentsBtn.addEventListener("click", e => {
     const localStorageUserId = localStorage.getItem("userId")
     let productId = localStorage.getItem('productId');
