@@ -4,6 +4,7 @@ let loginPassword = document.querySelector(".loginPassword")
 let emailCheckbox = document.querySelector("#rememberEmail")
 let loginrUrl = baseUrl + "/login"
 
+//post成功後把資料存入localStorage
 function saveUserToLocal({ accessToken, user}) {
     localStorage.setItem('token', accessToken);
     localStorage.setItem('userId', user.id);
@@ -12,6 +13,7 @@ function saveUserToLocal({ accessToken, user}) {
     localStorage.setItem('email', user.email)
 }
 
+//登入功能
 let loginPage =()=>{
     if (loginEmail.value =="" || loginPassword.value =="") {
         Swal.fire('錯誤', '請填入完整資料', 'error')
@@ -35,40 +37,22 @@ let loginPage =()=>{
         Swal.fire('錯誤', '請重新輸入', 'error')
     }))
 }
+
+//送出後把值清空
 const loginCleanInp=()=>{
      loginEmail = document.querySelector(".loginEmail").value=""
      loginPassword = document.querySelector(".loginPassword").value =""
 }
 
+//三秒後跳轉
 const loginDelay = () => {
     return setTimeout(() => {
         window.location.replace('index.html');
     }, 3000);
 }
 
-
-const loginData = ()=>{
-    let loginUserId = localStorage.getItem("userId")
-    axios.get(`${baseUrl}/users/${loginUserId}`)
-    .then((res=>{
-        let loginCheckbox = res.data
-        let str = ''
-        console.log(loginCheckbox);  
-        if (loginCheckbox.checkbox !== undefined) {
-            emailCheckbox.checked = false
-            str += ""
-            loginEmail.value = str
-        }
-        else{
-            emailCheckbox.checked = true
-            str += res.data.email
-            loginEmail.value = str
-        }
-    }))
-}
-
+//初始化
 const loginInit =()=>{
     loginSend.addEventListener("click", () => loginPage())
-    loginData()
 }
 loginInit()
