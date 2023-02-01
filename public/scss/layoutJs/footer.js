@@ -1,6 +1,6 @@
 const footerList = document.querySelector(".footer")
 
-//footer初始化
+//footer字串
 const footerInit = ()=>{
     let str = ''
     str += `<ul class="d-flex justify-content-md-between flex-wrap px-0">
