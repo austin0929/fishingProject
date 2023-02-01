@@ -60,7 +60,6 @@ const getProductDetailData = () => {
         }))
 }
 
-
 //取使用者評論 //判斷星星後組user字串
 const getUserComment = () => {
     axios.get(`${baseUrl}/600/comments`)
@@ -181,8 +180,6 @@ const getUserComment = () => {
         }))
 }
 
-
-
 //get購物車
 const getCartList = () => {
     axios.get(`${baseUrl}/carts`)
@@ -220,10 +217,6 @@ const postCart = (getId)=>{
         }))
     }
 }
-
-
-
-
 
 //加入書籤
 let addNewBookAry = []
