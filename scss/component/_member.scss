@@ -1,0 +1,71 @@
+.member-text1 {
+    width: 22%;
+}
+
+.member-title {
+    line-height: 48px;
+}
+
+.member-h2 {
+    font-size: 32px;
+}
+
+.member-btn {
+    width: 50%;
+}
+.memberImg{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.memberUserData{
+    position: relative;
+}
+.fa-camera{
+    position: absolute;
+    left: 145px;
+    bottom: 20px;
+    // top: 77%;
+    // right: 90%;
+    background: #087BE6;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.memberUserData{
+    .memberCameraIcon:hover{
+    cursor: pointer;
+    }
+}
+.memberCameraIcon{
+    position: absolute;
+   bottom: 35px;
+   left: 145px;
+   width: 40px;
+   height: 40px;
+}
+@media (max-width: 767.98px) {
+    .member-h2 {
+        font-size: 24px;
+    }
+
+    .member-text1 {
+        width: 30%;
+    }
+
+    .member-title {
+        line-height: 36px;
+    }
+
+    .member-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .member-text1 {
+        width: 20%;
+    }
+}
