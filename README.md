@@ -38,4 +38,10 @@
 - Render
 - JSON Server
 
+## 後台位置
+
+![image](https://i.imgur.com/MvgKMmT.jpg)
+
+- 管理者帳號 : david0929@gmail.com
+- 管理者密碼 : 1q2w3e
 
