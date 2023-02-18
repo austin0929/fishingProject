@@ -8,7 +8,6 @@ let localUserId = localStorage.getItem("userId")
 const cartInit = () => {
     getCartList()
 }
-
 //token 
 AUTH
 
