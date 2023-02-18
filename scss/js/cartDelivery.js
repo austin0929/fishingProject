@@ -1,9 +1,7 @@
 const delivery = document.querySelector(".delivery")
 const send = document.querySelector(".send")
 
-
 send.addEventListener("click", e => bulidOrderData())
-
 //token 
 AUTH
 
