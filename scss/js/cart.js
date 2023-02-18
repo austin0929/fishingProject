@@ -136,11 +136,7 @@ const deleteCartItem=(cartId)=> {
 //前往訂單運送 訂單資料從運送頁面post送出到orders
 orderBtn.addEventListener("click",e=>{
     e.preventDefault()
-
     window.location.replace('cartDelivery.html');
-
 })
-
-
 
 cartInit()
