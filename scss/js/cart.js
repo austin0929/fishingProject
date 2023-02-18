@@ -12,7 +12,6 @@ const cartInit = () => {
 //token 
 AUTH
 
-
 //購物車renderHTML
 const renderCartHTML = (item) => {
     return `<tr>
