@@ -62,7 +62,6 @@ let getCartList = ()=>{
         console.log(error);
     }))
 }
-
 //增減商品數量
 cartsListDom.addEventListener("click", function (e) {
     e.preventDefault();
