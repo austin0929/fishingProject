@@ -8,7 +8,7 @@ let indexUrl = baseUrl + "/products?category"
 
 
 
-function localStorageCategory({category}) {
+let localStorageCategory =({category})=> {
     localStorage.setItem('category',category);
 }
 
