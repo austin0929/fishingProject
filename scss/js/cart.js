@@ -75,26 +75,26 @@ cartsListDom.addEventListener("click", function (e) {
     axios.get(`${baseUrl}/carts/${cartId}`)
     .then((res=>{
         console.log(res);
-        let reviseQuantity = res.data.qty;
+        let cartQty = res.data.qty;
         if (status === "plus") {
-            reviseQuantity++;
-            console.log(reviseQuantity);
+            cartQty++;
+            console.log(cartQty);
         }
         else if (status === "minus"){
-            if (reviseQuantity == 1) {
+            if (cartQty == 1) {
                 Swal.fire('數量不可低於1','請檢察數量', 'error')
                 return;
             }
             else{
-                reviseQuantity --;
+                cartQty --;
             }
         }
-        patchProductNum(cartId, reviseQuantity);
+        patchProductNum(cartId, cartQty);
     })).catch(function (error) {
         console.log(error);
     });
 });
-function patchProductNum(cartId, reviseQuantity) {
+const patchProductNum =(cartId, reviseQuantity) => {
     console.log(cartId, reviseQuantity);
     const data = {
         qty: reviseQuantity
@@ -121,11 +121,11 @@ cartsListDom.addEventListener("click", function (e) {
         return;
     }
 });
-function deleteCartItem(cartId) {
+const deleteCartItem=(cartId)=> {
     axios
         .delete(`${baseUrl}/carts/${cartId}`)
-        .then(function (response) {
-            console.log(response);
+        .then(function (res) {
+            console.log(res);
             getCartList()
         })
         .catch(function (error) {
