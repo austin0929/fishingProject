@@ -26,11 +26,11 @@ const renderCartHTML = (item) => {
                                 <td>
                                     <div class="cartNum d-flex">
                                         <a href="#" >
-                                            <i class="fa-solid fa-minus fa-xl text-black js-reduce" data-status="minus" data-reduceNum="${item.productId}" data-cartId="${item.id}"></i>
+                                            <i class="fa-solid fa-minus fa-xl text-black js-reduce" data-status="minus" data-cartId="${item.id}"></i>
                                         </a>
                                         <span class="d-inline-block mx-1 number">${item.qty}</span>
                                         <a href="#">
-                                            <i class="fa-sharp fa-solid fa-plus fa-xl text-black js-add" data-status="plus" data-addNum="${item.productId}" data-cartId="${item.id}"></i>
+                                            <i class="fa-sharp fa-solid fa-plus fa-xl text-black js-add" data-status="plus" data-cartId="${item.id}"></i>
                                         </a>
                                     </div>
                                 </td>
@@ -40,7 +40,7 @@ const renderCartHTML = (item) => {
                                     <i class="fa-solid fa-trash-can cartDelete text-center ms-3 text-third pe-2" data-btn="delete" data-deleteCartId="${item.id}"></i>
                                     </a>
                                 </td>
-                            </tr>`
+                           </tr>`
 }
 
 
