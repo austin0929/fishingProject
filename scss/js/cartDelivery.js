@@ -95,7 +95,7 @@ const sendOrder = (orderData) => {
                 const localCarts = localStorage.getItem('carts');
                 const carts = JSON.parse(localCarts);
    
-                //arrayOfDelete陣列存放每一筆的購物車刪除請求
+                //aryDelete陣列存放每一筆的購物車刪除請求
                 let aryDelete = [];
                 carts.forEach((item => {
                     const request = axiosDeleteCart(item.id);
