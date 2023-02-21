@@ -259,14 +259,9 @@ productsDetail.addEventListener("click", e => {
                 Swal.fire('收藏成功', '此產品已收藏至書籤', 'success')
                 init()
 
-            })).catch((error => {
-                if (error.response.data === "jwt expired") {
-                    Swal.fire('登入逾時', '時間到！請登出後重新登入！', 'error')
-                }
-                if (error.response.data === "jwt malformed") {
-                    Swal.fire('請登入後操作', '請重新登入', 'error')
-                }
-            }))
+            })).catch((error=>{
+            console.log(error);
+        }))
     }
 })
 
