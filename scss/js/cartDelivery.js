@@ -79,7 +79,7 @@ const bulidOrderData = () => {
         }))
 }
 
-//建立資料庫 並post到orders
+//刪除全部購物車項目
 const axiosDeleteCart = (cartId = 0) => {
     const url = `${baseUrl}/600/carts/${cartId}`
     return axios.delete(url);
