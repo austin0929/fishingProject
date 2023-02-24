@@ -197,7 +197,6 @@ const getCartList = () => {
 //購物車post到cart
 productsDetail.addEventListener("click", e => {
     e.preventDefault()
-    if (getLocalUserId() == null) { Swal.fire('請先登入', '登入後操作', 'error') return }
     let getId = e.target.getAttribute("data-addCartId")
     if (e.target.classList.contains("js-cartId")) {
         postCart(getId)
