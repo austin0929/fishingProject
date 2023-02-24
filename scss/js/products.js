@@ -114,10 +114,6 @@ productListDom.addEventListener("click",e=>{
     }
 })
 const productPost = (productId, num)=>{
-           if (getLocalStorageUserId == null) {
-        Swal.fire('請先登入', '登入後操作', 'error')
-        return
-    }
     let addCartUrl = `${baseUrl}/600/users/${getLocalStorageUserId}/carts`
     let data = {
         productId: productId,
