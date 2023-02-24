@@ -32,48 +32,10 @@
         height: 100%;
         overflow: hidden;
 }
-.swiper-btn {
-    position: relative;
-}
 
-.swiper-button-prev {
-    color: transparent;
-        width: 44px;
-        height: 44px;
-        position: absolute; 
-        right : 0;
-        left: -11px;
-            top: -28rem;
-        img {
-            border-radius: 50px;
-        }
-}
 
-.swiper-button-next {
-    color: transparent;
-    width: 44px;
-    height: 44px;
-    position: absolute;
-    right: 0;
-    right: -30px;
-            top: -28rem;
-   img{
-        border-radius: 50px;
-   }
-}
-.fa-caret-right{
-    font-size: 70px;
-}
-.fa-caret-left {
-    font-size: 70px;
-}
+
 @media (max-width: 1599.98px) {
-    .swiper-button-next{
-        display: none;
-    };
-        .swiper-button-prev{
-            display: none;
-        }
 .swiper-container {
     height: 530px;
 }
