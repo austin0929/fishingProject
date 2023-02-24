@@ -77,12 +77,7 @@ saveCommentsBtn.addEventListener("click", e => {
                     Swal.fire('留言成功', '去看看大家的留言吧', 'success')
                     getUserComment()
                 })).catch((error=>{
-                    if (error.response.data === "jwt expired") {
-                        Swal.fire('登入逾時', '時間到！請登出後重新登入！', 'error')
-                    }
-                    if (error.response.data === "jwt malformed") {
-                        Swal.fire('請登入後操作！')
-                    }
+                    console.log(error);
                 }))
         }
     }))
