@@ -99,10 +99,6 @@ categoryBtn.addEventListener("click", e => {
 //加入購物車
 productListDom.addEventListener("click",e=>{
     e.preventDefault()
-       if (getLocalStorageUserId == null) {
-        Swal.fire('請先登入', '登入後操作', 'error')
-        return
-    }
         if (e.target.classList.contains("cardImg")) {
         let productId = e.target.getAttribute("data-productId")
         setLocalStorageId(productId)
@@ -118,6 +114,10 @@ productListDom.addEventListener("click",e=>{
     }
 })
 const productPost = (productId, num)=>{
+           if (getLocalStorageUserId == null) {
+        Swal.fire('請先登入', '登入後操作', 'error')
+        return
+    }
     let addCartUrl = `${baseUrl}/600/users/${getLocalStorageUserId}/carts`
     let data = {
         productId: productId,
