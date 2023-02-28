@@ -21,23 +21,96 @@ let getLocalUserId = () => {
     return localStorage.getItem("userId") || 0;
 }
 
+// const switchImg1 = document.querySelector(".switch-img1")
+// switchImg1.addEventListener("click", e => {
+//     document.querySelector('.switch-img1-big').style.backgroundImage =
+//         "url(\"https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-3.jpeg\")";
+//     document.querySelector('.switch-img2-big').style.backgroundImage = '';
+//     document.querySelector('.switch-img3-big').style.backgroundImage = '';
+//     document.querySelector('.switch-img4-big').style.backgroundImage = '';
+// })
+
+
+// const switchImg2 = document.querySelector(".switch-img2")
+// switchImg1.addEventListener("click", e => {
+//     document.querySelector('.switch-img2-big').style.backgroundImage = 
+//         "url(\"https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-5.jpeg\")";;
+//     document.querySelector('.switch-img1-big').style.backgroundImage = '';
+//     document.querySelector('.switch-img3-big').style.backgroundImage = '';
+//     document.querySelector('.switch-img4-big').style.backgroundImage = '';
+// })
+
+console.log(document.querySelector('.switch-img1-big').style.display);
+
 //renderHTML
-const renderHTMLProductDetail = (item) => {
-    return `<li class="col-xl-8 col-lg-10 col-md-12 mb-6 mb-lg-3">
-                    <h2 class="fw-bold h1 mb-3">${item.title}</h2>
-                    <hr>
-                    <img class="img-fluid rounded mb-3"
-                        src="${item.images}"
-                        alt="">
-                    <P class="fw-normal mb-5">
-                        ${item.content}
-                    </P>
-                    <div class="d-flex">
-                        <a href="#" class="btn btn-success js-cartId text-light productsDetailBtn d-block me-3"data-addCartId="${item.id}">加入購物車</a>
-                        <a href="#" class="btn btn-success text-light js-bookmark productsDetailBtn d-block" data-addBookmarkId="${item.id}">加入收藏</a>
-                    </div>
-                </li>`
-}
+// const renderHTMLProductDetail = (item) => {
+//     return `<li class="col-xl-8 col-lg-10 col-md-12 mb-6 mb-lg-3">
+//                     <h2 class="fw-bold h1 mb-3">${item.title}</h2>
+//                     <hr>
+//                     <img class="img-fluid rounded mb-3"
+//                         src="${item.images}"
+//                         alt="">
+//                     <P class="fw-normal mb-5">
+//                         ${item.content}
+//                     </P>
+//                     <div class="d-flex">
+//                         <a href="#" class="btn btn-success js-cartId text-light productsDetailBtn d-block me-3"data-addCartId="${item.id}">加入購物車</a>
+//                         <a href="#" class="btn btn-success text-light js-bookmark productsDetailBtn d-block" data-addBookmarkId="${item.id}">加入收藏</a>
+//                     </div>
+//                 </li>`
+// }
+
+// const renderHTMLProductDetail = (item) => {
+//     return `  <li class="col-md-6 pt-5 order-1 order-md-2">
+//                                 <div class="mb-md-6 mb-3">
+//                                     <h3 class="h5 mb-3 fw-bold">NB 復古鞋_中性_米灰色_ML574EVW-D楦 574</h3>
+//                                     <h2 class="h6 mb-md-6 mb-3">給予顧客最優質的產品是我們的職責！</h2>
+//                                     <p class="bg-fourth p-1 rounded">NT$3999</p>
+//                                 </div>
+//                                 <div class="mb-md-6 mb-3">
+//                                     <h3 class="h6"><span class="text-third me-2">付款方式</span>信用卡、無卡分期、行動支付，與其他多種方式</p>
+//                                         <h3 class="h6"><span class="text-third me-2">出貨</span>本地 倉庫出貨，24小時到貨</p>
+//                                 </div>
+//                                 <div class="d-flex">
+//                                     <a href="#"
+//                                         class="btn btn-success js-cartId text-light productsDetailBtn d-block me-3"
+//                                         data-addCartId="${item.id}">加入購物車</a>
+//                                     <a href="#" class="btn btn-success text-light js-bookmark productsDetailBtn d-block"
+//                                         data-addBookmarkId="${item.id}">加入收藏</a>
+//                                 </div>
+//                             </li>
+//                             <li class="col-md-6">
+//                                 <ul class="px-0 mb-3">
+//                                     <li class="bg-cover switch-img1-big rounded"
+//                                         style="background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-3.jpeg);">
+//                                     </li>
+//                                     <li class="bg-cover switch-img2-big rounded"
+//                                         style="background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-2.jpeg);">
+//                                     </li>
+//                                     <li class="bg-cover switch-img3-big rounded"
+//                                         style="background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-4.jpeg);">
+//                                     </li>
+//                                     <li class="bg-cover switch-img4-big rounded"
+//                                         style="background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-5.jpeg);">
+//                                     </li>
+//                                 </ul>
+//                                 <ul class="d-flex px-0">
+//                                     <li class="bg-cover switch-img1 me-2 rounded"
+//                                         style="background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-3.jpeg);">
+//                                     </li>
+//                                     <li class="bg-cover switch-img2 me-2 rounded"
+//                                         style="background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-2.jpeg);">
+//                                     </li>
+//                                     <li class="bg-cover switch-img3 me-2 rounded"
+//                                         style="background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-4.jpeg);">
+//                                     </li>
+//                                     <li class="bg-cover switch-img4 rounded"
+//                                         style="background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-5.jpeg);">
+//                                     </li>
+//                                 </ul>
+//                             </li>`
+// }
+
 
 
 //產品介紹初始化
@@ -194,6 +267,42 @@ const getCartList = () => {
         }))
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector('.switch-img1').addEventListener('click', function () {
+        document.querySelector('.switch-img1-big').style.display = 'block';
+        document.querySelector('.switch-img2-big').style.display = 'none';
+        document.querySelector('.switch-img3-big').style.display = 'none';
+        document.querySelector('.switch-img4-big').style.display = 'none';
+    });
+
+    document.querySelector('.switch-img2').addEventListener('click', function () {
+        document.querySelector('.switch-img2-big').style.display = 'block';
+        document.querySelector('.switch-img1-big').style.display = 'none';
+        document.querySelector('.switch-img3-big').style.display = 'none';
+        document.querySelector('.switch-img4-big').style.display = 'none';
+    });
+
+    document.querySelector('.switch-img3').addEventListener('click', function () {
+        document.querySelector('.switch-img3-big').style.display = 'block';
+        document.querySelector('.switch-img2-big').style.display = 'none';
+        document.querySelector('.switch-img1-big').style.display = 'none';
+        document.querySelector('.switch-img4-big').style.display = 'none';
+    });
+
+    document.querySelector('.switch-img4').addEventListener('click', function () {
+        document.querySelector('.switch-img4-big').style.display = 'block';
+        document.querySelector('.switch-img2-big').style.display = 'none';
+        document.querySelector('.switch-img1-big').style.display = 'none';
+        document.querySelector('.switch-img3-big').style.display = 'none';
+    });
+});
+
+// const getImg =(e)=>{
+//     console.log(e);
+//     let img = e.target.getAttribute("data-switchImg1")
+//     console.log(img);
+// }
+
 //購物車post到cart
 productsDetail.addEventListener("click", e => {
     e.preventDefault()
@@ -202,22 +311,22 @@ productsDetail.addEventListener("click", e => {
         postCart(getId)
     }
 })
-const postCart = (getId)=>{
+const postCart = (getId) => {
     let cartNum = 0;
     let getUserId = localStorage.getItem("userId")
     if (cartNum === 0) {
         let data = {
             productId: getId,
-            qty: cartNum +=1
+            qty: cartNum += 1
         }
-        axios.post(`${baseUrl}/600/users/${getUserId}/carts`,data)
-        .then((res=>{
-            console.log(res);
-            Swal.fire('加入購物車', '成功加入購物車', 'success')
+        axios.post(`${baseUrl}/600/users/${getUserId}/carts`, data)
+            .then((res => {
+                console.log(res);
+                Swal.fire('加入購物車', '成功加入購物車', 'success')
 
-        })).catch((error=>{
-            console.log(error);
-        }))
+            })).catch((error => {
+                console.log(error);
+            }))
     }
 }
 

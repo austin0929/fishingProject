@@ -13,7 +13,6 @@ const bulidOrderData = () => {
             //產品訂單資料
             if (res.status === 200) {
                 const carts = res.data
-                console.log(carts);
                 localStorage.setItem('carts', JSON.stringify(res.data));
                 const orderItems = carts.map((item) => {
                     return {
@@ -25,12 +24,12 @@ const bulidOrderData = () => {
                 });
 
                 //計算訂單總金額
-                let sum = 0;
+                let totalPrice = 0;
                 carts.forEach((item) => {
-                    const intQty = Number(item.qty) || 0;
-                    const intPrice = Number(item.product.price);
-                    const total = intQty * intPrice;
-                    sum += total;
+                    const cartQty = item.qty;
+                    const cartPrice = item.product.price;
+                    const total = cartQty * cartPrice;
+                    totalPrice += total;
                 });
 
                 let transportSurname = document.querySelector("#transportSurname").value
@@ -67,7 +66,7 @@ const bulidOrderData = () => {
                         email: transportEmail
                     },
                     products: orderItems,
-                    payment: sum,
+                    payment: totalPrice,
                 };
                 sendOrder(newOrder)
             }
@@ -79,12 +78,7 @@ const bulidOrderData = () => {
             Swal.fire('訂購成功', '三秒後跳轉首頁', 'success')
             cartDeliveryDelay()
         })).catch((error => {
-            if (error.response.data === "jwt expired") {
-                Swal.fire('登入逾時', '時間到！請登出後重新登入！', 'error')
-            }
-            if (error.response.data === "jwt malformed") {
-                Swal.fire('請登入後操作！')
-            }
+            console.log(error);
         }))
 }
 
@@ -93,30 +87,29 @@ const axiosDeleteCart = (cartId = 0) => {
     const url = `${baseUrl}/600/carts/${cartId}`
     return axios.delete(url);
 }
+
 //把整理過的資料參數帶入
 const sendOrder = (orderData) => {
     const data = orderData;
-    console.log(data);
     axios.post(`${baseUrl}/orders`, data)
         .then((res => {
-            console.log(res);
-
+           
             if (res.status === 201) {
                 const localCarts = localStorage.getItem('carts');
                 const carts = JSON.parse(localCarts);
-                console.log(carts);
-
-                let arrayOfDelete = [];
+   
+                //arrayOfDelete陣列存放每一筆的購物車刪除請求
+                let aryDelete = [];
                 carts.forEach((item => {
                     const request = axiosDeleteCart(item.id);
-                    arrayOfDelete.push(request);
+                    aryDelete.push(request);
                 }))
-                console.log('arrayOfDelete:::', arrayOfDelete);
-
-                Promise.all(arrayOfDelete)
+                
+                //發出所有請求 當全部完成時會把return axios.delete(url);的結果回傳到.then
+                Promise.all(aryDelete)
                     .then((res => {
-                        console.log('results:::', response);
-                        if (response.length === arrayOfDelete.length) {
+            
+                        if (res.length === aryDelete.length) {
                             console.log(`已全部刪除！`);
                         }
                     })

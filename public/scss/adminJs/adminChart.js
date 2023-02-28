@@ -63,18 +63,16 @@ const renderC3 = ()=>{
     let chart = c3.generate({
         bindto: '#chart', // HTML 元素綁定
         data: {
-            type: "pie",
+            type: "donut",
             columns: newChartData,
-            colors: {
-                "Louvre 雙人床架": "#DACBFF",
-                "Antony 雙人床架": "#9D7FEA",
-                "Anty 雙人床架": "#5434A7",
-                "其他": "#301E5F",
-            }
         },
+        donut: {
+        title: "產品銷售百分比"
+    }
     });
-
 }
+
+
 
 //計算使用者總數
 const countUsers = ()=>{

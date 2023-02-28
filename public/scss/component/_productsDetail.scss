@@ -5,6 +5,14 @@
         // font-style: normal !important;
     }
 }
+.productDetailImage1{
+    min-height: 400px;
+}
+.productDetailImage2{
+   background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-5.jpeg);
+   min-height: 450px;
+   margin-bottom: 30px;
+}
 .productsDetailBtn{
     width: 200px;
     height: 48px;
@@ -14,6 +22,9 @@
     width: 88px;
     height: 88px;
     border-radius: 50px;
+}
+.productDetailLineHeight{
+    line-height: 40px;
 }
 .CommentsTxt{
     font-size: 16px !important;
@@ -26,5 +37,8 @@
                 line-height: 28px;
                 font-style: normal;
             }
+    }
+    .productDetailImage1{
+        min-height: 220px;
     }
 }
