@@ -125,6 +125,7 @@ const productPost = (productId, num)=>{
         Swal.fire('加入購物車', '成功加入購物車', 'success')
     })).catch((error=>{
         console.log(error);
+         Swal.fire('加入失敗', '請登入註冊', 'error')
     }))
 }
 
