@@ -217,6 +217,7 @@ const postCart = (getId)=>{
 
         })).catch((error=>{
             console.log(error);
+              Swal.fire('請先登入', '請先完成登入註冊', 'error')
         }))
     }
 }
@@ -265,6 +266,7 @@ productsDetail.addEventListener("click", e => {
 
             })).catch((error=>{
             console.log(error);
+              Swal.fire('請先登入', '請先完成登入註冊', 'error')
         }))
     }
 })
