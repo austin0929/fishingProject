@@ -94,10 +94,10 @@ cartsListDom.addEventListener("click", function (e) {
         console.log(error);
     });
 });
-const patchProductNum =(cartId, reviseQuantity) => {
-    console.log(cartId, reviseQuantity);
+const patchProductNum = (cartId, cartQty) => {
+    console.log(cartId, cartQty);
     const data = {
-        qty: reviseQuantity
+        qty: cartQty
     }
     axios.patch(`${baseUrl}/carts/${cartId}`,data)
         .then(function (response) {
